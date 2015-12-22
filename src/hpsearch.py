@@ -75,6 +75,7 @@ def main(opts):
 
     hpspace = Space(3,opts)
     logging.critical(hpspace)
+    logging.critical('')
 
     def objwrapper(spsample):
         conf = Conf(spsample,args)
@@ -100,7 +101,7 @@ if __name__ == '__main__':
     OPTS = {
             'activation' : ['bi-relu','bi-lrelu','bi-elu','bi-lstm'],
             'hidden' : [128,256],
-            'n_batch' : [32,64,128,256],
+            'n_batch' : [8,16,32],
             'opt' : ['adam'],
             'drate' : [.2, .8],
             'lr': [.0001,.001],
