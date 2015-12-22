@@ -98,7 +98,7 @@ if __name__ == '__main__':
     setup_logger()
     hyperopt.base.logger.setLevel(logging.DEBUG)
     OPTS = {
-            'activation' : ['bi-relu','bi-lrelu','bi-elu'],
+            'activation' : ['bi-relu','bi-lrelu','bi-elu','bi-lstm'],
             'hidden' : [128,256],
             'n_batch' : [32,64,128,256],
             'opt' : ['adam'],
