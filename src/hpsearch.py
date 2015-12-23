@@ -91,8 +91,11 @@ def main(opts):
     best = fmin(objwrapper,
             space=hpspace.space,
             algo=tpe.suggest,
-            max_evals=10
+            max_evals=100
             )
+    """
+    {'opt': 0, 'dr2m3': 0.4161315610584588, 'activation': 2, 'n_batch': 1, 'h2m3': 0, 'dr0m3': 0.5461767196698459, 'dr1m3': 0.6720178139274229, 'h3m3': 0, 'dr3m3': 0.419643470550215, 'h1m3': 1, 'dpart': 2, 'lr': 0.0008630799496044787, 'norm': 8.679706724218939}
+    """
     logging.critical(best)
 
 if __name__ == '__main__':
