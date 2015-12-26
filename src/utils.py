@@ -1,5 +1,21 @@
+import logging
+from itertools import *
 from tabulate import tabulate
 from collections import defaultdict as dd
+
+def setup_logger(args):
+    import socket
+    host = socket.gethostname().split('.')[0]
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+    shandler = logging.StreamHandler()
+    shandler.setLevel(logging.CRITICAL)
+    logger.addHandler(shandler);
+
+    if len(args['log']) > 0 and args['log'] != 'nothing':
+        ihandler = logging.FileHandler('logs/{}.log'.format(args['log']), mode='w')
+        ihandler.setLevel(logging.DEBUG)
+        logger.addHandler(ihandler);
 
 def get_dset():
     s2tuples = dd(list)
@@ -13,9 +29,9 @@ def get_dset():
 
     trn = [st2sent(s,tuples) for s, tuples in s2tuples.items()]
     for sent in trn:
-        sent['cseq'] = [c for w in ''.join(sent['ws']) for c in w]
-        sent['wiseq'] = [wi for wi,w in enumerate(sent['ws']) for c in w]
-        sent['lseq'] = [l for w,l in zip(sent['ws'],sent['ls']) for c in w]
+        sent['cseq'] = [c for w in sent['ws'] for c in chain(['\w'],w,['w/'])]
+        sent['wiseq'] = [wi for wi,w in enumerate(sent['ws']) for c in chain(['\w'],w,['w/'])]
+        sent['lseq'] = [l for w,l in zip(sent['ws'],sent['ls']) for c in chain(['\w'],w,['w/'])]
     return trn
 
 def st2sent(s,tuples):

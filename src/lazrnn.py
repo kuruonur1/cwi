@@ -100,9 +100,11 @@ class RDNN:
                 elif ltype == 'elu': nonlin = lambda x: T.switch(x >= 0, x, T.exp(x) - 1)
 
                 l_forward = LayerType(prev_layer, n_hidden, mask_input=l_mask, grad_clipping=self.gclip, gradient_steps=self.truncate,
-                        W_hid_to_hid=Identity(), W_in_to_hid=lasagne.init.GlorotUniform(gain='relu'), nonlinearity=nonlin)
+                        # W_hid_to_hid=Identity(), W_in_to_hid=lasagne.init.GlorotUniform(gain='relu'), nonlinearity=nonlin)
+                        W_hid_to_hid=lasagne.init.GlorotUniform(gain='relu'), W_in_to_hid=lasagne.init.GlorotUniform(gain='relu'), nonlinearity=nonlin)
                 l_backward = LayerType(prev_layer, n_hidden, mask_input=l_mask, grad_clipping=self.gclip, gradient_steps=self.truncate,
-                        W_hid_to_hid=Identity(), W_in_to_hid=lasagne.init.GlorotUniform(gain='relu'), nonlinearity=nonlin, backwards=True)
+                        # W_hid_to_hid=Identity(), W_in_to_hid=lasagne.init.GlorotUniform(gain='relu'), nonlinearity=nonlin, backwards=True)
+                        W_hid_to_hid=lasagne.init.GlorotUniform(gain='relu'), W_in_to_hid=lasagne.init.GlorotUniform(gain='relu'), nonlinearity=nonlin, backwards=True)
             elif ltype == 'lstm':
                 LayerType = lasagne.layers.LSTMLayer
                 l_forward = LayerType(prev_layer, n_hidden, ingate=default_gate(),
@@ -151,7 +153,11 @@ class RDNN:
             return -T.sum(out_mask*target_output*T.log(output))/T.sum(out_mask)
         """
         def cost(output): # expects log softmax output
-            return -T.sum(out_mask*target_output*T.log(output) + out_mask*(1-target_output)*T.log(1-output)) / T.sum(out_mask)
+            p = output[out_mask.nonzero()]
+            t = target_output[out_mask.nonzero()]
+            return T.sum(lasagne.objectives.binary_crossentropy(p,t)) / T.sum(out_mask)
+            # return -T.sum(t*T.log(p) + (1-t)*T.log(1-p)) / T.sum(out_mask)
+            # return -T.sum(out_mask*target_output*T.log(output+2e-6) + out_mask*(1-target_output)*T.log(1-output+2e-6)) / T.sum(out_mask)
             # return -T.sum(out_mask*target_output*T.log(output))/T.sum(out_mask)
 
         cost_train = cost(lasagne.layers.get_output(l_out, deterministic=False))
@@ -229,5 +235,3 @@ class RDNN:
     def set_param_values(self, values):
         lasagne.layers.set_all_param_values(self.output_layer, values)
 
-if __name__ == '__main__':
-    print RDNN.params

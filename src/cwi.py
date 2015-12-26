@@ -24,16 +24,16 @@ def get_arg_parser():
     parser.add_argument("--n_hidden", default=[128], nargs='+', type=int, help="number of neurons in each hidden layer")
     parser.add_argument("--drates", default=[0, 0], nargs='+', type=float, help="dropout rates")
     parser.add_argument("--opt", default="adam", help="optimization method: sgd, rmsprop, adagrad, adam")
-    parser.add_argument("--lr", default=0.001, type=float, help="learning rate")
-    parser.add_argument("--norm", default=5, type=float, help="Threshold for clipping norm of gradient")
+    parser.add_argument("--lr", default=.01, type=float, help="learning rate")
+    parser.add_argument("--norm", default=2, type=float, help="Threshold for clipping norm of gradient")
     parser.add_argument("--n_batch", default=5, type=int, help="batch size")
-    parser.add_argument("--fepoch", default=100, type=int, help="number of epochs")
+    parser.add_argument("--fepoch", default=20, type=int, help="number of epochs")
     parser.add_argument("--patience", default=-1, type=int, help="how patient the validator is")
     parser.add_argument("--sample", default=0, type=int, help="num of sents to sample from trn in the order of K")
     parser.add_argument("--emb", default=0, type=int, help="embedding layer size")
     parser.add_argument("--gclip", default=0, type=float, help="clip gradient messages in recurrent layers if they are above this value")
     parser.add_argument("--truncate", default=-1, type=int, help="backward step size")
-    parser.add_argument("--log", default='das_auto', help="log file name")
+    parser.add_argument("--log", default='nothing', help="log file name")
     parser.add_argument("--sorted", default=1, type=int, help="sort datasets before training and prediction")
     parser.add_argument("--in2out", default=0, type=int, help="connect input & output")
     parser.add_argument("--save", default=False, action='store_true', help="save param values to file")
@@ -101,7 +101,7 @@ def xvalidate(dset, k, args):
 
     rdnn = RDNN_Dummy(feat.NF, args) if args['rnn'] == 'dummy' else RDNN(feat.NF, args)
     default_param_values = rdnn.get_param_values() # parameter default values
-    fold_indxs = range(0,len(dset),int(np.ceil(len(dset)/k))) + [len(dset)]
+    fold_indxs = [0,40] if k == 1 else range(0,len(dset),int(np.ceil(len(dset)/k))) + [len(dset)]
     fold_scores = []
     for fstart, fend in zip(fold_indxs, fold_indxs[1:]):
         logging.debug('fstart:{} fend:{}'.format(fstart,fend))
@@ -133,11 +133,14 @@ def main():
     parser = get_arg_parser()
     args = vars(parser.parse_args())
 
+    utils.setup_logger(args)
     dset = utils.get_dset()
     sent_lens = [len(sent['ws']) for sent in dset]
-    print '# of words per sent, min:{} max:{} mean:{:.2f} std:{:.2f}'.format(min(sent_lens), max(sent_lens), np.mean(sent_lens), np.std(sent_lens))
+    logging.debug('# of words per sent, min:{} max:{} mean:{:.2f} std:{:.2f}'.format(min(sent_lens), max(sent_lens), np.mean(sent_lens), np.std(sent_lens)))
 
-    xvalidate(dset, 4, args)
+    logging.critical(tabulate([args], headers='keys'))
+
+    xvalidate(dset, 1, args)
 
     """
     feat = featchar.Feat()

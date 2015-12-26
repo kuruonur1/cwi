@@ -49,29 +49,15 @@ class Conf(object):
         keys = ['opt', 'activation', 'drates', 'n_batch', 'lr', 'fepoch', 'n_hidden', 'norm']
         return tabulate([map(self.params.get,keys)], headers=keys)
 
-def setup_logger():
-    import socket
-    host = socket.gethostname().split('.')[0]
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-    shandler = logging.StreamHandler()
-    shandler.setLevel(logging.CRITICAL)
-    logger.addHandler(shandler);
-
-    """
-    if len(args['log']) > 0 and args['log'] != 'nothing':
-        ihandler = logging.FileHandler('{}.log'.format(args['log']), mode='w')
-        ihandler.setLevel(logging.DEBUG)
-        logger.addHandler(ihandler);
-    """
 
 
 def main(opts):
-    import cwi
+    import cwi, utils
     parser = cwi.get_arg_parser()
     args = vars(parser.parse_args())
+    utils.setup_logger(args)
     dset = utils.get_dset()
-    objfunc = partial(cwi.xvalidate, dset, 4)
+    objfunc = partial(cwi.xvalidate, dset, 1)
 
     hpspace = Space(3,opts)
     logging.critical(hpspace)
@@ -99,15 +85,15 @@ def main(opts):
     logging.critical(best)
 
 if __name__ == '__main__':
-    setup_logger()
     hyperopt.base.logger.setLevel(logging.DEBUG)
     OPTS = {
-            'activation' : ['bi-relu','bi-lrelu','bi-elu','bi-lstm'],
+            # 'activation' : ['bi-relu','bi-lrelu','bi-elu','bi-lstm'],
+            'activation' : ['bi-gru'],
             'hidden' : [128,256],
-            'n_batch' : [8,16,32],
+            'n_batch' : [5,10,20,40],
             'opt' : ['adam'],
             'drate' : [.2, .8],
-            'lr': [.0001,.001],
+            'lr': [.0001,.1],
             'norm': [0.1,10],
             }
     main(OPTS)
