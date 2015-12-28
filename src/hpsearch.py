@@ -59,7 +59,7 @@ def main(opts):
     dset = utils.get_dset()
     objfunc = partial(cwi.xvalidate, dset, 1)
 
-    hpspace = Space(3,opts)
+    hpspace = Space(5,opts)
     logging.critical(hpspace)
     logging.critical('')
 
@@ -88,7 +88,7 @@ if __name__ == '__main__':
     hyperopt.base.logger.setLevel(logging.DEBUG)
     OPTS = {
             # 'activation' : ['bi-relu','bi-lrelu','bi-elu','bi-lstm'],
-            'activation' : ['bi-gru'],
+            'activation' : ['bi-lstm'],
             'hidden' : [128,256],
             'n_batch' : [5,10,20,40],
             'opt' : ['adam'],
