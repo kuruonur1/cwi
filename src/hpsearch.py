@@ -88,7 +88,8 @@ if __name__ == '__main__':
     hyperopt.base.logger.setLevel(logging.DEBUG)
     OPTS = {
             # 'activation' : ['bi-relu','bi-lrelu','bi-elu','bi-lstm'],
-            'activation' : ['bi-lstm'],
+            'activation' : ['bi-gru'],
+            'emb' : [128],
             'hidden' : [128,256],
             'n_batch' : [5,10,20,40],
             'opt' : ['adam'],
