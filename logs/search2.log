@@ -10214,3 +10214,570 @@ dset      epoch    cost    cerr     p     r     f
 ------  -------  ------  ------  ----  ----  ----
 trn          13     nan    0.76  0.35  0.92  0.51
 dev          13     nan    0.74  0.39  0.94  0.55
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          14    3.67    0.18  0.69  0.00  0.00
+dev          14    4.20    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          15    1.05    0.18  0.69  0.00  0.00
+dev          15    1.17    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          16    5.32    0.81  0.31  0.99  0.47
+dev          16    5.18    0.79  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          17    1.45    0.18  0.69  0.00  0.00
+dev          17    1.63    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          18    7.28    0.82  0.31  1.00  0.47
+dev          18    7.13    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          19    3.54    0.18  0.69  0.00  0.00
+dev          19    3.98    0.20  0.65  0.00  0.00
+mean:0.67 std:0.00
+f1:0.67
+
+job returned status: ok
+job returned loss: 0.3345464195
+tpe_transform took 0.016575 seconds
+TPE using 95/95 trials with best loss 0.334546
+opt    activation    drates                                      n_batch         lr    fepoch  n_hidden        norm
+-----  ------------  ----------------------------------------  ---------  ---------  --------  ----------  --------
+adam   bi-gru        [0.3485425947584839, 0.7578791034020472]         40  0.0926753        20  [256]       0.520221
+['c=!', 'c=#', 'c=$', 'c=%', "c='", 'c=(', 'c=)', 'c=,', 'c=-', 'c=.', 'c=0', 'c=1', 'c=2', 'c=3', 'c=4', 'c=5', 'c=6', 'c=7', 'c=8', 'c=9', 'c=:', 'c=;', 'c=A', 'c=B', 'c=C', 'c=D', 'c=E', 'c=F', 'c=G', 'c=H', 'c=I', 'c=J', 'c=K', 'c=L', 'c=M', 'c=N', 'c=O', 'c=P', 'c=R', 'c=S', 'c=T', 'c=U', 'c=V', 'c=W', 'c=X', 'c=Y', 'c=Z', 'c=\\w', 'c=`', 'c=a', 'c=b', 'c=c', 'c=d', 'c=e', 'c=f', 'c=g', 'c=h', 'c=i', 'c=j', 'c=k', 'c=l', 'c=m', 'c=n', 'c=o', 'c=p', 'c=q', 'c=r', 'c=s', 'c=t', 'c=u', 'c=v', 'c=w', 'c=w/', 'c=x', 'c=y', 'c=z']
+c=! c=# c=$ c=% c=' c=( c=) c=, c=- c=. c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=\w c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=w/ c=x c=y c=z
+NF: 76
+l_in: (None, None, 76)
+l_mask: (Subtensor{int64}.0, Subtensor{int64}.0)
+l_drop: (None, None, 76)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_reshape: (None, 512)
+l_out: (None, None)
+[W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W, b]
+Compiling functions...
+Compiling done.
+fstart:0 fend:40
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           0     nan    0.82  0.31  1.00  0.47
+dev           0     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           1    2.24    0.77  0.31  1.00  0.47
+dev           1    2.19    0.74  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           2    2.13    0.31  0.69  0.00  0.00
+dev           2    2.29    0.32  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           3     nan    0.82  0.31  1.00  0.47
+dev           3     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           4    3.34    0.82  0.31  1.00  0.47
+dev           4    3.26    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           5     nan    0.59  0.38  0.83  0.52
+dev           5     nan    0.58  0.42  0.82  0.55
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           6    2.66    0.82  0.31  1.00  0.47
+dev           6    2.59    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           7    0.86    0.18  0.69  0.00  0.00
+dev           7    0.97    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           8    0.91    0.18  0.69  0.00  0.00
+dev           8    1.03    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           9    0.76    0.18  0.69  0.00  0.00
+dev           9    0.84    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          10    0.87    0.18  0.69  0.00  0.00
+dev          10    0.99    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          11    0.62    0.18  0.69  0.00  0.00
+dev          11    0.69    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          12    0.63    0.18  0.69  0.00  0.00
+dev          12    0.71    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          13    0.51    0.18  0.69  0.00  0.00
+dev          13    0.58    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          14    0.47    0.18  0.69  0.00  0.00
+dev          14    0.52    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          15    0.46    0.18  0.69  0.00  0.00
+dev          15    0.52    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          16    0.47    0.18  0.69  0.00  0.00
+dev          16    0.53    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          17    0.46    0.18  0.69  0.00  0.00
+dev          17    0.51    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          18    0.46    0.18  0.69  0.00  0.00
+dev          18    0.53    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          19    0.46    0.18  0.69  0.00  0.00
+dev          19    0.52    0.20  0.65  0.00  0.00
+mean:0.55 std:0.00
+f1:0.55
+
+job returned status: ok
+job returned loss: 0.448212109753
+tpe_transform took 0.016682 seconds
+TPE using 96/96 trials with best loss 0.334546
+opt    activation    drates                                                          n_batch         lr    fepoch  n_hidden        norm
+-----  ------------  ------------------------------------------------------------  ---------  ---------  --------  ----------  --------
+adam   bi-gru        [0.6281238129662056, 0.2629109094744855, 0.4733958408686883]         40  0.0847633        20  [128, 256]  0.301897
+['c=!', 'c=#', 'c=$', 'c=%', "c='", 'c=(', 'c=)', 'c=,', 'c=-', 'c=.', 'c=0', 'c=1', 'c=2', 'c=3', 'c=4', 'c=5', 'c=6', 'c=7', 'c=8', 'c=9', 'c=:', 'c=;', 'c=A', 'c=B', 'c=C', 'c=D', 'c=E', 'c=F', 'c=G', 'c=H', 'c=I', 'c=J', 'c=K', 'c=L', 'c=M', 'c=N', 'c=O', 'c=P', 'c=R', 'c=S', 'c=T', 'c=U', 'c=V', 'c=W', 'c=X', 'c=Y', 'c=Z', 'c=\\w', 'c=`', 'c=a', 'c=b', 'c=c', 'c=d', 'c=e', 'c=f', 'c=g', 'c=h', 'c=i', 'c=j', 'c=k', 'c=l', 'c=m', 'c=n', 'c=o', 'c=p', 'c=q', 'c=r', 'c=s', 'c=t', 'c=u', 'c=v', 'c=w', 'c=w/', 'c=x', 'c=y', 'c=z']
+c=! c=# c=$ c=% c=' c=( c=) c=, c=- c=. c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=\w c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=w/ c=x c=y c=z
+NF: 76
+l_in: (None, None, 76)
+l_mask: (Subtensor{int64}.0, Subtensor{int64}.0)
+l_drop: (None, None, 76)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_reshape: (None, 512)
+l_out: (None, None)
+[W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W, b]
+Compiling functions...
+Compiling done.
+fstart:0 fend:40
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           0    3.33    0.18  0.69  0.00  0.00
+dev           0    3.76    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           1     nan    0.82  0.31  1.00  0.47
+dev           1     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           2     nan    0.82  0.31  1.00  0.47
+dev           2     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           3    3.68    0.82  0.31  1.00  0.47
+dev           3    3.59    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           4    0.67    0.23  0.69  0.00  0.00
+dev           4    0.72    0.25  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           5    0.54    0.18  0.69  0.00  0.00
+dev           5    0.60    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           6    0.68    0.18  0.69  0.00  0.00
+dev           6    0.77    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           7    1.52    0.18  0.69  0.00  0.00
+dev           7    1.72    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           8    0.66    0.18  0.69  0.00  0.00
+dev           8    0.72    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           9    0.58    0.18  0.69  0.00  0.00
+dev           9    0.65    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          10    1.22    0.18  0.69  0.00  0.00
+dev          10    1.39    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          11    0.66    0.18  0.69  0.00  0.00
+dev          11    0.73    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          12    2.36    0.18  0.69  0.00  0.00
+dev          12    2.66    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          13    2.24    0.18  0.69  0.00  0.00
+dev          13    2.52    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          14    1.88    0.75  0.32  0.98  0.49
+dev          14    1.87    0.75  0.35  0.98  0.52
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          15    2.24    0.18  0.69  0.00  0.00
+dev          15    2.52    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          16    0.83    0.18  0.69  0.00  0.00
+dev          16    0.93    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          17    0.64    0.18  0.69  0.00  0.00
+dev          17    0.72    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          18    0.54    0.18  0.69  0.00  0.00
+dev          18    0.60    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          19    0.62    0.18  0.69  0.00  0.00
+dev          19    0.70    0.20  0.65  0.00  0.00
+mean:0.52 std:0.00
+f1:0.52
+
+job returned status: ok
+job returned loss: 0.479857116438
+tpe_transform took 0.019259 seconds
+TPE using 97/97 trials with best loss 0.334546
+opt    activation    drates                                                          n_batch         lr    fepoch  n_hidden        norm
+-----  ------------  ------------------------------------------------------------  ---------  ---------  --------  ----------  --------
+adam   bi-gru        [0.6109726861585972, 0.7718752623475373, 0.4010734210249988]         40  0.0605406        20  [128, 256]  0.828611
+['c=!', 'c=#', 'c=$', 'c=%', "c='", 'c=(', 'c=)', 'c=,', 'c=-', 'c=.', 'c=0', 'c=1', 'c=2', 'c=3', 'c=4', 'c=5', 'c=6', 'c=7', 'c=8', 'c=9', 'c=:', 'c=;', 'c=A', 'c=B', 'c=C', 'c=D', 'c=E', 'c=F', 'c=G', 'c=H', 'c=I', 'c=J', 'c=K', 'c=L', 'c=M', 'c=N', 'c=O', 'c=P', 'c=R', 'c=S', 'c=T', 'c=U', 'c=V', 'c=W', 'c=X', 'c=Y', 'c=Z', 'c=\\w', 'c=`', 'c=a', 'c=b', 'c=c', 'c=d', 'c=e', 'c=f', 'c=g', 'c=h', 'c=i', 'c=j', 'c=k', 'c=l', 'c=m', 'c=n', 'c=o', 'c=p', 'c=q', 'c=r', 'c=s', 'c=t', 'c=u', 'c=v', 'c=w', 'c=w/', 'c=x', 'c=y', 'c=z']
+c=! c=# c=$ c=% c=' c=( c=) c=, c=- c=. c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=\w c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=w/ c=x c=y c=z
+NF: 76
+l_in: (None, None, 76)
+l_mask: (Subtensor{int64}.0, Subtensor{int64}.0)
+l_drop: (None, None, 76)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_reshape: (None, 512)
+l_out: (None, None)
+[W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W, b]
+Compiling functions...
+Compiling done.
+fstart:0 fend:40
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           0     nan    0.32  0.68  0.01  0.02
+dev           0     nan    0.33  0.65  0.04  0.07
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           1     nan    0.82  0.31  1.00  0.47
+dev           1     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           2     nan    0.59  0.42  0.74  0.54
+dev           2     nan    0.57  0.49  0.77  0.59
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           3    2.32    0.82  0.31  1.00  0.47
+dev           3    2.27    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           4    0.81    0.32  0.69  0.00  0.01
+dev           4    0.86    0.32  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           5    0.87    0.18  0.69  0.00  0.00
+dev           5    0.96    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           6     nan    0.70  0.32  0.99  0.49
+dev           6     nan    0.70  0.35  0.97  0.52
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           7    4.27    0.79  0.33  0.97  0.49
+dev           7    4.19    0.77  0.36  0.98  0.53
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           8     nan    0.82  0.31  1.00  0.47
+dev           8     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           9     nan    0.79  0.32  0.97  0.48
+dev           9     nan    0.77  0.36  0.97  0.53
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          10    0.75    0.43  0.53  0.36  0.43
+dev          10    0.71    0.40  0.57  0.40  0.47
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          11    0.60    0.22  0.68  0.00  0.00
+dev          11    0.64    0.23  0.65  0.01  0.01
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          12    1.59    0.39  0.69  0.00  0.00
+dev          12    1.62    0.40  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          13    0.58    0.18  0.69  0.00  0.00
+dev          13    0.63    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          14    0.65    0.18  0.69  0.00  0.00
+dev          14    0.74    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          15   10.83    0.82  0.31  1.00  0.47
+dev          15   10.55    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          16     nan    0.82  0.31  1.00  0.47
+dev          16     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          17     nan    0.79  0.34  0.93  0.50
+dev          17     nan    0.77  0.37  0.95  0.53
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          18     nan    0.58  0.42  0.67  0.52
+dev          18     nan    0.57  0.44  0.68  0.54
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          19    1.48    0.52  0.52  0.37  0.43
+dev          19    1.47    0.51  0.48  0.42  0.45
+mean:0.59 std:0.00
+f1:0.59
+
+job returned status: ok
+job returned loss: 0.40567026898
+tpe_transform took 0.018102 seconds
+TPE using 98/98 trials with best loss 0.334546
+opt    activation    drates                                                           n_batch         lr    fepoch  n_hidden        norm
+-----  ------------  -------------------------------------------------------------  ---------  ---------  --------  ----------  --------
+adam   bi-gru        [0.6795923413882973, 0.7727462169738164, 0.42330048704075623]         40  0.0459081        20  [128, 256]  0.913836
+['c=!', 'c=#', 'c=$', 'c=%', "c='", 'c=(', 'c=)', 'c=,', 'c=-', 'c=.', 'c=0', 'c=1', 'c=2', 'c=3', 'c=4', 'c=5', 'c=6', 'c=7', 'c=8', 'c=9', 'c=:', 'c=;', 'c=A', 'c=B', 'c=C', 'c=D', 'c=E', 'c=F', 'c=G', 'c=H', 'c=I', 'c=J', 'c=K', 'c=L', 'c=M', 'c=N', 'c=O', 'c=P', 'c=R', 'c=S', 'c=T', 'c=U', 'c=V', 'c=W', 'c=X', 'c=Y', 'c=Z', 'c=\\w', 'c=`', 'c=a', 'c=b', 'c=c', 'c=d', 'c=e', 'c=f', 'c=g', 'c=h', 'c=i', 'c=j', 'c=k', 'c=l', 'c=m', 'c=n', 'c=o', 'c=p', 'c=q', 'c=r', 'c=s', 'c=t', 'c=u', 'c=v', 'c=w', 'c=w/', 'c=x', 'c=y', 'c=z']
+c=! c=# c=$ c=% c=' c=( c=) c=, c=- c=. c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=\w c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=w/ c=x c=y c=z
+NF: 76
+l_in: (None, None, 76)
+l_mask: (Subtensor{int64}.0, Subtensor{int64}.0)
+l_drop: (None, None, 76)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_reshape: (None, 512)
+l_out: (None, None)
+[W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W, b]
+Compiling functions...
+Compiling done.
+fstart:0 fend:40
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           0     nan    0.41  0.63  0.13  0.22
+dev           0     nan    0.41  0.59  0.13  0.21
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           1     nan    0.82  0.31  1.00  0.47
+dev           1     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           2     nan    0.82  0.31  1.00  0.47
+dev           2     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           3     nan    0.82  0.31  1.00  0.47
+dev           3     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           4     nan    0.82  0.31  1.00  0.47
+dev           4     nan    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           5    1.19    0.18  0.69  0.00  0.00
+dev           5    1.33    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           6    1.47    0.60  0.35  0.90  0.50
+dev           6    1.45    0.59  0.39  0.93  0.55
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           7    0.68    0.19  0.69  0.00  0.00
+dev           7    0.80    0.21  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           8    1.29    0.18  0.69  0.00  0.00
+dev           8    1.45    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           9    0.64    0.18  0.69  0.00  0.00
+dev           9    0.72    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          10    0.53    0.18  0.69  0.00  0.00
+dev          10    0.58    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          11    0.76    0.18  0.69  0.00  0.00
+dev          11    0.86    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          12    0.84    0.18  0.69  0.00  0.00
+dev          12    0.96    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          13    0.70    0.56  0.45  0.57  0.50
+dev          13    0.70    0.55  0.47  0.64  0.54
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          14    1.87    0.82  0.31  1.00  0.47
+dev          14    1.81    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          15    4.19    0.82  0.31  1.00  0.47
+dev          15    4.09    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          16    6.62    0.82  0.31  1.00  0.47
+dev          16    6.47    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          17    6.05    0.82  0.31  1.00  0.47
+dev          17    5.91    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          18    6.13    0.82  0.31  1.00  0.47
+dev          18    5.95    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          19    1.77    0.18  0.69  0.00  0.00
+dev          19    2.00    0.20  0.65  0.00  0.00
+mean:0.55 std:0.00
+f1:0.55
+
+job returned status: ok
+job returned loss: 0.450184792011
+tpe_transform took 0.018124 seconds
+TPE using 99/99 trials with best loss 0.334546
+opt    activation    drates                                                         n_batch         lr    fepoch  n_hidden        norm
+-----  ------------  -----------------------------------------------------------  ---------  ---------  --------  ----------  --------
+adam   bi-gru        [0.615671849559704, 0.679716574166705, 0.47483146948735366]         40  0.0601342        20  [128, 256]  0.413188
+['c=!', 'c=#', 'c=$', 'c=%', "c='", 'c=(', 'c=)', 'c=,', 'c=-', 'c=.', 'c=0', 'c=1', 'c=2', 'c=3', 'c=4', 'c=5', 'c=6', 'c=7', 'c=8', 'c=9', 'c=:', 'c=;', 'c=A', 'c=B', 'c=C', 'c=D', 'c=E', 'c=F', 'c=G', 'c=H', 'c=I', 'c=J', 'c=K', 'c=L', 'c=M', 'c=N', 'c=O', 'c=P', 'c=R', 'c=S', 'c=T', 'c=U', 'c=V', 'c=W', 'c=X', 'c=Y', 'c=Z', 'c=\\w', 'c=`', 'c=a', 'c=b', 'c=c', 'c=d', 'c=e', 'c=f', 'c=g', 'c=h', 'c=i', 'c=j', 'c=k', 'c=l', 'c=m', 'c=n', 'c=o', 'c=p', 'c=q', 'c=r', 'c=s', 'c=t', 'c=u', 'c=v', 'c=w', 'c=w/', 'c=x', 'c=y', 'c=z']
+c=! c=# c=$ c=% c=' c=( c=) c=, c=- c=. c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=\w c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=w/ c=x c=y c=z
+NF: 76
+l_in: (None, None, 76)
+l_mask: (Subtensor{int64}.0, Subtensor{int64}.0)
+l_drop: (None, None, 76)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_reshape: (None, 512)
+l_out: (None, None)
+[W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W, b]
+Compiling functions...
+Compiling done.
+fstart:0 fend:40
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           0     nan    0.29  0.69  0.00  0.00
+dev           0     inf    0.30  0.66  0.01  0.02
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           1    6.51    0.82  0.31  1.00  0.47
+dev           1    6.35    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           2    1.20    0.18  0.69  0.00  0.00
+dev           2    1.35    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           3    0.94    0.18  0.69  0.00  0.00
+dev           3    1.04    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           4    1.40    0.70  0.33  0.94  0.48
+dev           4    1.35    0.68  0.37  0.96  0.54
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           5    1.35    0.18  0.69  0.00  0.00
+dev           5    1.50    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           6    0.85    0.38  0.66  0.06  0.11
+dev           6    0.88    0.39  0.64  0.12  0.20
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           7    6.18    0.82  0.31  1.00  0.47
+dev           7    6.03    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           8    7.00    0.82  0.31  1.00  0.47
+dev           8    6.81    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           9    1.92    0.18  0.69  0.00  0.00
+dev           9    2.16    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          10    0.68    0.52  0.49  0.53  0.51
+dev          10    0.68    0.50  0.51  0.57  0.54
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          11    1.07    0.80  0.31  0.99  0.48
+dev          11    1.05    0.78  0.34  0.99  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          12    0.93    0.69  0.36  0.89  0.51
+dev          12    0.90    0.66  0.43  0.88  0.57
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          13    0.61    0.18  0.69  0.00  0.00
+dev          13    0.67    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          14    5.87    0.82  0.31  1.00  0.47
+dev          14    5.81    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          15    2.99    0.82  0.31  1.00  0.47
+dev          15    2.89    0.80  0.35  1.00  0.51
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          16    0.91    0.18  0.69  0.00  0.00
+dev          16    1.03    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          17    0.56    0.18  0.69  0.00  0.00
+dev          17    0.62    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          18    0.82    0.54  0.48  0.68  0.56
+dev          18    0.83    0.55  0.47  0.66  0.55
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          19    1.68    0.82  0.31  1.00  0.47
+dev          19    1.61    0.79  0.35  1.00  0.51
+mean:0.57 std:0.00
+f1:0.57
+
+job returned status: ok
+job returned loss: 0.42532090419
+{'opt': 0, 'dr2m2': 0.47905195967852404, 'activation': 0, 'n_batch': 3, 'dr0m2': 0.6063144589394993, 'h2m2': 1, 'dr1m2': 0.7709813633692215, 'h1m2': 0, 'dpart': 1, 'lr': 0.0999991986124228, 'norm': 0.3848939776763656}

@@ -32,6 +32,7 @@ def get_dset():
         sent['cseq'] = [c for w in sent['ws'] for c in chain(['\w'],w,['w/'])]
         sent['wiseq'] = [wi for wi,w in enumerate(sent['ws']) for c in chain(['\w'],w,['w/'])]
         sent['lseq'] = [l for w,l in zip(sent['ws'],sent['ls']) for c in chain(['\w'],w,['w/'])]
+        sent['eseq'] = [int(c=='w/') for w in sent['ws'] for e, c in enumerate(chain(['\w'],w,['w/']))]
     return trn
 
 def st2sent(s,tuples):
@@ -48,7 +49,7 @@ def pprint_word(sent):
     print tabulate([sent['ws'],sent['ls'],sent['ii']])
 
 def pprint_char(sent):
-    print tabulate([sent['cseq'][:40],sent['wiseq'][:40],sent['lseq'][:40]])
+    print tabulate([sent['cseq'][:40],sent['wiseq'][:40],sent['lseq'][:40],sent['eseq'][:40]])
 
 def stats(s2tuples):
     print '----'
