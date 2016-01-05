@@ -26,7 +26,10 @@ class Feat(object):
 
     def transform(self, sent):
         Xsent = self.dvec.transform([self.feat_basic(ci, sent) for ci,c in enumerate(sent['cseq'])]) # nchar x nf
-        ysent = np.array(sent['lseq'])
+        slen = Xsent.shape[0]
+        ysent = np.zeros((slen, 2), dtype=bool)
+        ysent[range(slen), sent['lseq']] = True
+        # ysent = np.array(sent['lseq'])
         return Xsent, ysent
 
     def feat_basic(self, ci, sent):

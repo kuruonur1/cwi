@@ -3,19 +3,6 @@ from itertools import *
 from tabulate import tabulate
 from collections import defaultdict as dd
 
-def setup_logger(args):
-    import socket
-    host = socket.gethostname().split('.')[0]
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-    shandler = logging.StreamHandler()
-    shandler.setLevel(logging.CRITICAL)
-    logger.addHandler(shandler);
-
-    if len(args['log']) > 0 and args['log'] != 'nothing':
-        ihandler = logging.FileHandler('logs/{}.log'.format(args['log']), mode='w')
-        ihandler.setLevel(logging.DEBUG)
-        logger.addHandler(ihandler);
 
 def get_dset():
     s2tuples = dd(list)

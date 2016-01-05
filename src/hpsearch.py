@@ -1,8 +1,11 @@
 from functools import partial
 from tabulate import tabulate
 
+import random
 import logging
+import lasagne
 import hyperopt
+import numpy as np
 from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
 
 import utils
@@ -15,7 +18,7 @@ class Space(object):
         dpart = [
             dict(
                 [('h%dm%d'%(l,maxl), hp.choice('h%dm%d'%(l,maxl), opts['hidden'])) for l in range(1,maxl+1)] +
-                [('dr%dm%d'%(l,maxl), hp.uniform('dr%dm%d'%(l,maxl), *opts['drate'])) for l in range(0,maxl+1)]
+                [('dr%dm%d'%(l,maxl), hp.choice('dr%dm%d'%(l,maxl), opts['drate'])) for l in range(0,maxl+1)]
             ) for maxl in range(1,self.max_layerc+1)]
 
         self.space = {
@@ -49,13 +52,28 @@ class Conf(object):
         keys = ['opt', 'activation', 'drates', 'n_batch', 'lr', 'fepoch', 'n_hidden', 'norm']
         return tabulate([map(self.params.get,keys)], headers=keys)
 
+def setup_logger(args):
+    import socket
+    host = socket.gethostname().split('.')[0]
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+    shandler = logging.StreamHandler()
+    shandler.setLevel(logging.CRITICAL)
+    logger.addHandler(shandler);
 
+    if len(args['log']) > 0 and args['log'] != 'nothing':
+        ihandler = logging.FileHandler('logs/{}.log'.format(args['log']), mode='w')
+        ihandler.setLevel(logging.DEBUG)
+        logger.addHandler(ihandler);
 
 def main(opts):
-    import cwi, utils
+    random.seed(0)
+    rng = np.random.RandomState(1234567)
+    lasagne.random.set_rng(rng)
+    import cwi
     parser = cwi.get_arg_parser()
     args = vars(parser.parse_args())
-    utils.setup_logger(args)
+    setup_logger(args)
     dset = utils.get_dset()
     objfunc = partial(cwi.xvalidate, dset, 1)
 
@@ -93,7 +111,8 @@ if __name__ == '__main__':
             'hidden' : [128,256],
             'n_batch' : [5,10,20,40],
             'opt' : ['adam'],
-            'drate' : [.2, .8],
+            # 'drate' : [.2, .8],
+            'drate' : [.2, .3, .4, .5, .6, .7, .8],
             'lr': [.0001,.1],
             'norm': [0.1,10],
             }
