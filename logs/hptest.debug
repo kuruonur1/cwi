@@ -1,0 +1,115 @@
+""" args """
+activations:['bi-gru']
+evals:100
+fepoch:20
+kfold:1
+layers_max:1
+log:hptest
+opts:['adam']
+rnn:lazrnn
+""" args end """
+
+""" space """
+opt       lr             emb    activation    n_batch          hidden      norm       drate
+--------  -------------  -----  ------------  ---------------  ----------  ---------  -----------------------------------
+['adam']  [0.0001, 0.1]  [128]  ['bi-gru']    [5, 10, 20, 40]  [128, 256]  [0.1, 10]  [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+""" space end """
+
+tpe_transform took 0.007476 seconds
+TPE using 0 trials
+generating trials for new_ids: [0]
+opt    activation    drates        n_batch         lr    fepoch  n_hidden       norm
+-----  ------------  ----------  ---------  ---------  --------  ----------  -------
+adam   bi-gru        [0.3, 0.8]         20  0.0429042        20  [128]       6.99504
+['c=!', 'c=#', 'c=$', 'c=%', "c='", 'c=(', 'c=)', 'c=,', 'c=-', 'c=.', 'c=0', 'c=1', 'c=2', 'c=3', 'c=4', 'c=5', 'c=6', 'c=7', 'c=8', 'c=9', 'c=:', 'c=;', 'c=A', 'c=B', 'c=C', 'c=D', 'c=E', 'c=F', 'c=G', 'c=H', 'c=I', 'c=J', 'c=K', 'c=L', 'c=M', 'c=N', 'c=O', 'c=P', 'c=R', 'c=S', 'c=T', 'c=U', 'c=V', 'c=W', 'c=X', 'c=Y', 'c=Z', 'c=\\w', 'c=`', 'c=a', 'c=b', 'c=c', 'c=d', 'c=e', 'c=f', 'c=g', 'c=h', 'c=i', 'c=j', 'c=k', 'c=l', 'c=m', 'c=n', 'c=o', 'c=p', 'c=q', 'c=r', 'c=s', 'c=t', 'c=u', 'c=v', 'c=w', 'c=w/', 'c=x', 'c=y', 'c=z']
+c=! c=# c=$ c=% c=' c=( c=) c=, c=- c=. c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=\w c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=w/ c=x c=y c=z
+NF: 76
+l_in: (None, None, 76)
+l_mask: (Subtensor{int64}.0, Subtensor{int64}.0)
+l_drop: (None, None, 76)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_reshape: (None, 256)
+l_rec_out: (None, 2)
+l_out: (None, None, 2)
+[W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W_in_to_updategate, W_hid_to_updategate, b_updategate, W_in_to_resetgate, W_hid_to_resetgate, b_resetgate, W_in_to_hidden_update, W_hid_to_hidden_update, b_hidden_update, hid_init, W, b]
+Compiling functions...
+Compiling done.
+fstart:0 fend:40
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           1    0.30    0.20  0.69  0.00  0.00
+dev           1    0.32    0.22  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           2    0.24    0.18  0.69  0.00  0.00
+dev           2    0.26    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           3    0.22    0.18  0.69  0.00  0.00
+dev           3    0.24    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           4    0.23    0.18  0.69  0.00  0.00
+dev           4    0.26    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           5    0.22    0.18  0.69  0.00  0.00
+dev           5    0.24    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           6    0.22    0.18  0.69  0.00  0.00
+dev           6    0.25    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           7    0.21    0.18  0.69  0.00  0.00
+dev           7    0.23    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           8    0.20    0.17  0.69  0.00  0.00
+dev           8    0.23    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn           9    0.20    0.17  0.69  0.00  0.00
+dev           9    0.24    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          10    0.20    0.17  0.69  0.00  0.00
+dev          10    0.23    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          11    0.19    0.17  0.69  0.00  0.00
+dev          11    0.23    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          12    0.19    0.17  0.69  0.00  0.00
+dev          12    0.24    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          13    0.19    0.17  0.69  0.00  0.00
+dev          13    0.24    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          14    0.19    0.17  0.70  0.01  0.02
+dev          14    0.24    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          15    0.20    0.18  0.69  0.00  0.00
+dev          15    0.23    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          16    0.21    0.17  0.69  0.00  0.00
+dev          16    0.23    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          17    0.59    0.78  0.31  1.00  0.47
+dev          17    0.58    0.76  0.35  1.00  0.52
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          18    0.53    0.18  0.69  0.00  0.00
+dev          18    0.60    0.20  0.65  0.00  0.00
+dset      epoch    cost    cerr     p     r     f
+------  -------  ------  ------  ----  ----  ----
+trn          19    0.22    0.17  0.69  0.00  0.00
+dev          19    0.24    0.20  0.65  0.00  0.00

@@ -36,7 +36,7 @@ class RDNN_Dummy:
 
     def train(self, dsetdat):
         import time
-        time.sleep(5000)
+        time.sleep(3)
         return 19
 
     def predict(self, dsetdat):
@@ -53,6 +53,12 @@ class RDNN_Dummy:
         randvals = np.random.rand(sent_len, nc)
         randlogprobs = np.log(randvals / np.sum(randvals,axis=0))
         return randlogprobs
+
+    def get_param_values(self):
+        return []
+
+    def set_param_values(self, values):
+        pass
 
 
 def extract_rnn_params(kwargs):

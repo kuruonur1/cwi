@@ -153,7 +153,7 @@ def validate(rdnn, trn, dev, fepoch, batcher):
         rows = [['trn',e] + row1, ['dev',e] + row2]
         logging.debug(tabulate(rows, floatfmt='.2f', headers=['dset','epoch','cost','cerr','p','r','f']))
         if row2[1] < .3: f1s.append(row2[-1])
-    return max(f1s)
+    return max(f1s) if len(f1s) else 0.
 
 def setup_logger(args):
     import socket
