@@ -1,6 +1,7 @@
 from functools import partial
 from tabulate import tabulate
 
+import theano
 import random
 import logging
 import lasagne
@@ -64,14 +65,17 @@ def setup_logger(args):
     shandler.setLevel(logging.CRITICAL)
     logger.addHandler(shandler);
 
-    if len(args['log']) > 0 and args['log'] != 'nothing':
-        ihandler = logging.FileHandler('logs/{}.crit'.format(args['log']), mode='w')
-        ihandler.setLevel(logging.CRITICAL)
-        logger.addHandler(ihandler);
+    param_log_name = ','.join(['{}:{}'.format(p,v) for p, v in sorted(args.iteritems())])
+    param_log_name = "".join(i for i in param_log_name if i not in "\"\/ &*?<>|[]()'")
+    base_log_name = '{}:{},{}'.format(host, theano.config.device, param_log_name if args['log'] == 'nothing' else args['log'])
 
-        dhandler = logging.FileHandler('logs/{}.debug'.format(args['log']), mode='w')
-        dhandler.setLevel(logging.DEBUG)
-        logger.addHandler(dhandler);
+    ihandler = logging.FileHandler('logs/{}.crit'.format(base_log_name), mode='w')
+    ihandler.setLevel(logging.CRITICAL)
+    logger.addHandler(ihandler);
+
+    dhandler = logging.FileHandler('logs/{}.debug'.format(base_log_name), mode='w')
+    dhandler.setLevel(logging.DEBUG)
+    logger.addHandler(dhandler);
 
 def get_arg_parser():
     parser = argparse.ArgumentParser(prog="hpcwi")
@@ -79,8 +83,10 @@ def get_arg_parser():
     parser.add_argument("--rnn", default='lazrnn', choices=['lazrnn','dummy'], help="how to merge forward backward layer outputs")
     parser.add_argument("--activations", default=['bi-gru'], nargs='+', help='activation function for hidden layer: bi-relu bi-lstm bi-tanh')
     parser.add_argument("--opts", default=['adam'], nargs='+', help="opt algos")
-    parser.add_argument("--fepoch", default=20, type=int, help="number of epochs")
-    parser.add_argument("--evals", default=100, type=int, help="num of configurations to try")
+    parser.add_argument("--n_hiddens", default=[128,256], type=int, nargs='+', help="n_hiddens")
+    parser.add_argument("--lrs", default=[.0001,.1], type=float, nargs='+', help="learning rates")
+    parser.add_argument("--fepoch", default=50, type=int, help="number of epochs")
+    parser.add_argument("--evals", default=500, type=int, help="num of configurations to try")
     parser.add_argument("--kfold", default=1, type=int, help="num of folds in xvalidate")
     parser.add_argument("--layers_max", default=3, type=int, help="max num of layers to try")
     parser.add_argument("--log", default='nothing', help="log file name")
@@ -133,12 +139,12 @@ if __name__ == '__main__':
             # 'activation' : ['bi-relu','bi-lrelu','bi-elu','bi-lstm'],
             'activation' : args['activations'],
             'emb' : [128],
-            'hidden' : [128,256],
+            'hidden' : args['n_hiddens'],
             'n_batch' : [5,10,20,40],
             'opt' : args['opts'],
             # 'drate' : [.2, .8],
             'drate' : [.2, .3, .4, .5, .6, .7, .8],
-            'lr': [.0001,.1],
+            'lr': args['lrs'],
             'norm': [0.1,10],
             }
     main(OPTS, args)
