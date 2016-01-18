@@ -58,6 +58,5 @@ def stats(s2tuples):
 if __name__ == '__main__':
     import random
     trn = get_dset()
-    sent = random.choice(trn)
-    pprint_word(sent)
-    pprint_char(sent)
+    subvocab = set(w[:e] for sent in trn for w in sent['ws'] for e in range(1,len(w)))
+    print len(subvocab)

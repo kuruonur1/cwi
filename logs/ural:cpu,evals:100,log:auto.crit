@@ -1,0 +1,505 @@
+  evals  log
+-------  -----
+    100  auto
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    7.27        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    1.95        100  rbf                    2       100       20            2
+f1:0.24
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    5.56        100  rbf                    2       100       20            2
+f1:0.22
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    1.95        100  rbf                    2       100       20            2
+f1:0.18
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    5.71        100  rbf                    2       100       20            2
+f1:0.20
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.80        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.13        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    2.27        100  rbf                    2       100       20            2
+f1:0.26
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.09  mikolovWikipedia100.embeddings    6.85        100  rbf                    2       100       20            2
+f1:0.24
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    8.03        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    4.78        100  rbf                    2       100       20            2
+f1:0.28
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    8.30        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.95        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    2.38        100  rbf                    2       100       20            2
+f1:0.21
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.49        100  rbf                    2       100       20            2
+f1:0.33
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    7.74        100  rbf                    2       100       20            2
+f1:0.30
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.08  mikolovWikipedia100.embeddings    5.42        100  rbf                    2       100       20            2
+f1:0.29
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.73        100  rbf                    2       100       20            2
+f1:0.31
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.26        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    9.12        100  rbf                    2       100       20            2
+f1:0.33
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    4.00        100  rbf                    2       100       20            2
+f1:0.32
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    8.66        100  rbf                    2       100       20            2
+f1:0.32
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.87        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    6.86        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.88        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    4.09        100  rbf                    2       100       20            2
+f1:0.32
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    7.34        100  rbf                    2       100       20            2
+f1:0.07
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    6.33        100  rbf                    2       100       20            2
+f1:0.32
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.09  mikolovWikipedia100.embeddings    8.56        100  rbf                    2       100       20            2
+f1:0.24
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    8.82        100  rbf                    2       100       20            2
+f1:0.31
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.08  mikolovWikipedia100.embeddings    4.98        100  rbf                    2       100       20            2
+f1:0.27
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    3.37        100  rbf                    2       100       20            2
+f1:0.29
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    6.28        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    1.18        100  rbf                    2       100       20            2
+f1:0.18
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    7.52        100  rbf                    2       100       20            2
+f1:0.00
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.94        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    5.74        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.05        100  rbf                    2       100       20            2
+f1:0.24
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.24        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.21        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.09  mikolovWikipedia100.embeddings    6.59        100  rbf                    2       100       20            2
+f1:0.27
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    5.65        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    4.93        100  rbf                    2       100       20            2
+f1:0.29
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.05        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    7.29        100  rbf                    2       100       20            2
+f1:0.33
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    6.00        100  rbf                    2       100       20            2
+f1:0.22
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    5.29        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    4.36        100  rbf                    2       100       20            2
+f1:0.29
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.43        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.10  mikolovWikipedia100.embeddings    3.09        100  rbf                    2       100       20            2
+f1:0.23
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    7.80        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.42        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    8.88        100  rbf                    2       100       20            2
+f1:0.32
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.61        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.16        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    9.69        100  rbf                    2       100       20            2
+f1:0.32
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    7.16        100  rbf                    2       100       20            2
+f1:0.33
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.00        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    7.63        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    1.20        100  rbf                    2       100       20            2
+f1:0.18
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    6.63        100  rbf                    2       100       20            2
+f1:0.20
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    7.98        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    3.45        100  rbf                    2       100       20            2
+f1:0.27
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.08  mikolovWikipedia100.embeddings    4.56        100  rbf                    2       100       20            2
+f1:0.27
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    1.86        100  rbf                    2       100       20            2
+f1:0.22
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.54        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.06        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.64        100  rbf                    2       100       20            2
+f1:0.33
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    9.00        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.64        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.34        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    9.96        100  rbf                    2       100       20            2
+f1:0.00
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.57        100  rbf                    2       100       20            2
+f1:0.37
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    8.44        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    8.15        100  rbf                    2       100       20            2
+f1:0.24
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    9.05        100  rbf                    2       100       20            2
+f1:0.21
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    7.44        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.75        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.98        100  rbf                    2       100       20            2
+f1:0.38
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.97        100  rbf                    2       100       20            2
+f1:0.38
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.99        100  rbf                    2       100       20            2
+f1:0.38
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.77        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.94        100  rbf                    2       100       20            2
+f1:0.30
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.94        100  rbf                    2       100       20            2
+f1:0.38
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.36        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    2.82        100  rbf                    2       100       20            2
+f1:0.29
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.55        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    5.22        100  rbf                    2       100       20            2
+f1:0.33
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.98        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    8.83        100  rbf                    2       100       20            2
+f1:0.34
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    6.86        100  rbf                    2       100       20            2
+f1:0.33
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.32        100  rbf                    2       100       20            2
+f1:0.36
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.24        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    1.58        100  rbf                    2       100       20            2
+f1:0.21
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    3.71        100  rbf                    2       100       20            2
+f1:0.24
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    2.52        100  rbf                    2       100       20            2
+f1:0.27
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.58        100  rbf                    2       100       20            2
+f1:0.28
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    9.85        100  rbf                    2       100       20            2
+f1:0.15
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    7.84        100  rbf                    2       100       20            2
+f1:0.35
+
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    7.23        100  rbf                    2       100       20            2
+f1:0.32
+
+{'kerngamma': 0.021860208662649816, 'svmC': 9.9774441575328}

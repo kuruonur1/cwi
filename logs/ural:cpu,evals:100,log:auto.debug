@@ -1,0 +1,1725 @@
+  evals  log
+-------  -----
+    100  auto
+
+tpe_transform took 0.002219 seconds
+TPE using 0 trials
+generating trials for new_ids: [0]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    7.27        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.94  0.96
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.643332754328
+tpe_transform took 0.001739 seconds
+TPE using 1/1 trials with best loss 0.643333
+generating trials for new_ids: [1]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    1.95        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.86  0.67  0.15  0.24
+mean:0.24 std:0.00
+f1:0.24
+
+job returned status: ok
+job returned loss: 0.758747786128
+tpe_transform took 0.001699 seconds
+TPE using 2/2 trials with best loss 0.643333
+generating trials for new_ids: [2]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    5.56        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.90  0.76  0.26  0.39
+dev           1    0.86  0.66  0.13  0.22
+mean:0.22 std:0.00
+f1:0.22
+
+job returned status: ok
+job returned loss: 0.776077748958
+tpe_transform took 0.001726 seconds
+TPE using 3/3 trials with best loss 0.643333
+generating trials for new_ids: [3]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    1.95        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.89  0.74  0.19  0.31
+dev           1    0.86  0.66  0.10  0.18
+mean:0.18 std:0.00
+f1:0.18
+
+job returned status: ok
+job returned loss: 0.819836956522
+tpe_transform took 0.001687 seconds
+TPE using 4/4 trials with best loss 0.643333
+generating trials for new_ids: [4]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    5.71        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.89  0.74  0.18  0.29
+dev           1    0.86  0.66  0.12  0.20
+mean:0.20 std:0.00
+f1:0.20
+
+job returned status: ok
+job returned loss: 0.801723706803
+tpe_transform took 0.001721 seconds
+TPE using 5/5 trials with best loss 0.643333
+generating trials for new_ids: [5]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.80        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.64364997606
+tpe_transform took 0.001718 seconds
+TPE using 6/6 trials with best loss 0.643333
+generating trials for new_ids: [6]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.13        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.97  0.91  0.94
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.656766259176
+tpe_transform took 0.001663 seconds
+TPE using 7/7 trials with best loss 0.643333
+generating trials for new_ids: [7]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    2.27        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.95  0.88  0.64  0.74
+dev           1    0.86  0.66  0.17  0.26
+mean:0.26 std:0.00
+f1:0.26
+
+job returned status: ok
+job returned loss: 0.735264908492
+tpe_transform took 0.001709 seconds
+TPE using 8/8 trials with best loss 0.643333
+generating trials for new_ids: [8]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.09  mikolovWikipedia100.embeddings    6.85        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.15  0.24
+mean:0.24 std:0.00
+f1:0.24
+
+job returned status: ok
+job returned loss: 0.758335708179
+tpe_transform took 0.001720 seconds
+TPE using 9/9 trials with best loss 0.643333
+generating trials for new_ids: [9]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    8.03        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650778738458
+tpe_transform took 0.001688 seconds
+TPE using 10/10 trials with best loss 0.643333
+generating trials for new_ids: [10]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    4.78        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.93  0.83  0.48  0.61
+dev           1    0.85  0.65  0.18  0.28
+mean:0.28 std:0.00
+f1:0.28
+
+job returned status: ok
+job returned loss: 0.720991120294
+tpe_transform took 0.001716 seconds
+TPE using 11/11 trials with best loss 0.643333
+generating trials for new_ids: [11]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    8.30        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.86  0.66  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.655887593842
+tpe_transform took 0.001710 seconds
+TPE using 12/12 trials with best loss 0.643333
+generating trials for new_ids: [12]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.95        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  0.99  0.96  0.98
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650162895002
+tpe_transform took 0.001718 seconds
+TPE using 13/13 trials with best loss 0.643333
+generating trials for new_ids: [13]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    2.38        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.91  0.78  0.29  0.43
+dev           1    0.86  0.66  0.12  0.21
+mean:0.21 std:0.00
+f1:0.21
+
+job returned status: ok
+job returned loss: 0.793125239053
+tpe_transform took 0.001717 seconds
+TPE using 14/14 trials with best loss 0.643333
+generating trials for new_ids: [14]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.49        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.94  0.85  0.55  0.67
+dev           1    0.85  0.64  0.22  0.33
+mean:0.33 std:0.00
+f1:0.33
+
+job returned status: ok
+job returned loss: 0.671074777591
+tpe_transform took 0.001712 seconds
+TPE using 15/15 trials with best loss 0.643333
+generating trials for new_ids: [15]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    7.74        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.20  0.30
+mean:0.30 std:0.00
+f1:0.30
+
+job returned status: ok
+job returned loss: 0.696609429788
+tpe_transform took 0.001717 seconds
+TPE using 16/16 trials with best loss 0.643333
+generating trials for new_ids: [16]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.08  mikolovWikipedia100.embeddings    5.42        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.18  0.29
+mean:0.29 std:0.00
+f1:0.29
+
+job returned status: ok
+job returned loss: 0.711078367335
+tpe_transform took 0.001731 seconds
+TPE using 17/17 trials with best loss 0.643333
+generating trials for new_ids: [17]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.73        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.94  0.86  0.57  0.69
+dev           1    0.85  0.64  0.21  0.31
+mean:0.31 std:0.00
+f1:0.31
+
+job returned status: ok
+job returned loss: 0.6853877501
+tpe_transform took 0.001727 seconds
+TPE using 18/18 trials with best loss 0.643333
+generating trials for new_ids: [18]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.26        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.66  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.661784676489
+tpe_transform took 0.001687 seconds
+TPE using 19/19 trials with best loss 0.643333
+generating trials for new_ids: [19]
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    9.12        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.22  0.33
+mean:0.33 std:0.00
+f1:0.33
+
+job returned status: ok
+job returned loss: 0.668377974008
+tpe_transform took 0.001677 seconds
+TPE using 20/20 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    4.00        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.96  0.90  0.70  0.79
+dev           1    0.85  0.64  0.21  0.32
+mean:0.32 std:0.00
+f1:0.32
+
+job returned status: ok
+job returned loss: 0.68487804878
+tpe_transform took 0.001713 seconds
+TPE using 21/21 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    8.66        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.66  0.21  0.32
+mean:0.32 std:0.00
+f1:0.32
+
+job returned status: ok
+job returned loss: 0.675594841499
+tpe_transform took 0.001730 seconds
+TPE using 22/22 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.87        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.86  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.649552889858
+tpe_transform took 0.001684 seconds
+TPE using 23/23 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    6.86        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.98  0.94  0.83  0.88
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650470081715
+tpe_transform took 0.001690 seconds
+TPE using 24/24 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.88        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.85  0.64  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.651400504447
+tpe_transform took 0.001729 seconds
+TPE using 25/25 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    4.09        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.96  0.91  0.72  0.80
+dev           1    0.85  0.65  0.21  0.32
+mean:0.32 std:0.00
+f1:0.32
+
+job returned status: ok
+job returned loss: 0.677662867064
+tpe_transform took 0.001728 seconds
+TPE using 26/26 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    7.34        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.88  0.70  0.03  0.06
+dev           1    0.86  0.67  0.04  0.07
+mean:0.07 std:0.00
+f1:0.07
+
+job returned status: ok
+job returned loss: 0.930228694834
+tpe_transform took 0.001724 seconds
+TPE using 27/27 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    6.33        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.85  0.65  0.21  0.32
+mean:0.32 std:0.00
+f1:0.32
+
+job returned status: ok
+job returned loss: 0.684625093137
+tpe_transform took 0.001705 seconds
+TPE using 28/28 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.09  mikolovWikipedia100.embeddings    8.56        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.15  0.24
+mean:0.24 std:0.00
+f1:0.24
+
+job returned status: ok
+job returned loss: 0.758335708179
+tpe_transform took 0.001688 seconds
+TPE using 29/29 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    8.82        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.20  0.31
+mean:0.31 std:0.00
+f1:0.31
+
+job returned status: ok
+job returned loss: 0.689106195218
+tpe_transform took 0.001723 seconds
+TPE using 30/30 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.08  mikolovWikipedia100.embeddings    4.98        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.68  0.17  0.27
+mean:0.27 std:0.00
+f1:0.27
+
+job returned status: ok
+job returned loss: 0.725893294175
+tpe_transform took 0.001692 seconds
+TPE using 31/31 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    3.37        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.97  0.93  0.78  0.85
+dev           1    0.85  0.64  0.18  0.29
+mean:0.29 std:0.00
+f1:0.29
+
+job returned status: ok
+job returned loss: 0.713921540858
+tpe_transform took 0.001725 seconds
+TPE using 32/32 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    6.28        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.97  0.93  0.77  0.84
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.657061963606
+tpe_transform took 0.001681 seconds
+TPE using 33/33 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    1.18        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.92  0.80  0.38  0.51
+dev           1    0.86  0.67  0.10  0.18
+mean:0.18 std:0.00
+f1:0.18
+
+job returned status: ok
+job returned loss: 0.819525633273
+tpe_transform took 0.001673 seconds
+TPE using 34/34 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    7.52        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.87  0.69  0.00  0.00
+dev           1    0.86  0.65  0.00  0.00
+mean:0.00 std:0.00
+f1:0.00
+
+job returned status: ok
+job returned loss: 1.0
+tpe_transform took 0.001734 seconds
+TPE using 35/35 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.94        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.66  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.648350065536
+tpe_transform took 0.001709 seconds
+TPE using 36/36 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    5.74        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.66346196578
+tpe_transform took 0.001684 seconds
+TPE using 37/37 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.05        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.91  0.79  0.35  0.48
+dev           1    0.85  0.65  0.15  0.24
+mean:0.24 std:0.00
+f1:0.24
+
+job returned status: ok
+job returned loss: 0.760023527105
+tpe_transform took 0.001733 seconds
+TPE using 38/38 trials with best loss 0.643333
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.24        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.637225656767
+tpe_transform took 0.001662 seconds
+TPE using 39/39 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.21        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.97  0.93  0.80  0.86
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.657359092992
+tpe_transform took 0.001709 seconds
+TPE using 40/40 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.09  mikolovWikipedia100.embeddings    6.59        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.87  0.68  0.17  0.27
+mean:0.27 std:0.00
+f1:0.27
+
+job returned status: ok
+job returned loss: 0.733597676241
+tpe_transform took 0.001695 seconds
+TPE using 41/41 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    5.65        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.66346196578
+tpe_transform took 0.001706 seconds
+TPE using 42/42 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    4.93        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.86  0.66  0.19  0.29
+mean:0.29 std:0.00
+f1:0.29
+
+job returned status: ok
+job returned loss: 0.705042816365
+tpe_transform took 0.001692 seconds
+TPE using 43/43 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.05        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.92  0.95
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650470081715
+tpe_transform took 0.001695 seconds
+TPE using 44/44 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    7.29        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.85  0.65  0.22  0.33
+mean:0.33 std:0.00
+f1:0.33
+
+job returned status: ok
+job returned loss: 0.669980355974
+tpe_transform took 0.001652 seconds
+TPE using 45/45 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    6.00        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.90  0.76  0.27  0.40
+dev           1    0.86  0.65  0.13  0.22
+mean:0.22 std:0.00
+f1:0.22
+
+job returned status: ok
+job returned loss: 0.776201214795
+tpe_transform took 0.001654 seconds
+TPE using 46/46 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    5.29        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  0.99  0.97  0.98
+dev           1    0.86  0.66  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.662617289761
+tpe_transform took 0.001698 seconds
+TPE using 47/47 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    4.36        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.86  0.66  0.19  0.29
+mean:0.29 std:0.00
+f1:0.29
+
+job returned status: ok
+job returned loss: 0.705042816365
+tpe_transform took 0.001648 seconds
+TPE using 48/48 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.43        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.96  0.90  0.70  0.78
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650162895002
+tpe_transform took 0.001710 seconds
+TPE using 49/49 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.10  mikolovWikipedia100.embeddings    3.09        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.86  0.68  0.14  0.23
+mean:0.23 std:0.00
+f1:0.23
+
+job returned status: ok
+job returned loss: 0.766534612509
+tpe_transform took 0.001696 seconds
+TPE using 50/50 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    7.80        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.96  0.91  0.74  0.82
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.657359092992
+tpe_transform took 0.001648 seconds
+TPE using 51/51 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.42        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650778738458
+tpe_transform took 0.001707 seconds
+TPE using 52/52 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    8.88        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.94  0.84  0.54  0.66
+dev           1    0.85  0.64  0.21  0.32
+mean:0.32 std:0.00
+f1:0.32
+
+job returned status: ok
+job returned loss: 0.678192659576
+tpe_transform took 0.001700 seconds
+TPE using 53/53 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.61        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.99  0.96  0.97
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.649857167842
+tpe_transform took 0.001654 seconds
+TPE using 54/54 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.16        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.661509774787
+tpe_transform took 0.001700 seconds
+TPE using 55/55 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    9.69        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.21  0.32
+mean:0.32 std:0.00
+f1:0.32
+
+job returned status: ok
+job returned loss: 0.681923145242
+tpe_transform took 0.001715 seconds
+TPE using 56/56 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    7.16        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.85  0.64  0.22  0.33
+mean:0.33 std:0.00
+f1:0.33
+
+job returned status: ok
+job returned loss: 0.671351742215
+tpe_transform took 0.001710 seconds
+TPE using 57/57 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    6.00        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.96  0.89  0.93
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.657061963606
+tpe_transform took 0.001694 seconds
+TPE using 58/58 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    7.63        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.98  0.96  0.89  0.92
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.643968701824
+tpe_transform took 0.001703 seconds
+TPE using 59/59 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    1.20        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.92  0.80  0.35  0.49
+dev           1    0.86  0.67  0.10  0.18
+mean:0.18 std:0.00
+f1:0.18
+
+job returned status: ok
+job returned loss: 0.819525633273
+tpe_transform took 0.001708 seconds
+TPE using 60/60 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    6.63        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.89  0.74  0.18  0.29
+dev           1    0.86  0.66  0.12  0.20
+mean:0.20 std:0.00
+f1:0.20
+
+job returned status: ok
+job returned loss: 0.801723706803
+tpe_transform took 0.001705 seconds
+TPE using 61/61 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    7.98        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.86  0.66  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.66206088993
+tpe_transform took 0.001650 seconds
+TPE using 62/62 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.07  mikolovWikipedia100.embeddings    3.45        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.86  0.67  0.17  0.27
+mean:0.27 std:0.00
+f1:0.27
+
+job returned status: ok
+job returned loss: 0.734755811407
+tpe_transform took 0.001710 seconds
+TPE using 63/63 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.08  mikolovWikipedia100.embeddings    4.56        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.68  0.17  0.27
+mean:0.27 std:0.00
+f1:0.27
+
+job returned status: ok
+job returned loss: 0.725893294175
+tpe_transform took 0.001704 seconds
+TPE using 64/64 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    1.86        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.94  0.85  0.53  0.66
+dev           1    0.86  0.66  0.13  0.22
+mean:0.22 std:0.00
+f1:0.22
+
+job returned status: ok
+job returned loss: 0.784586876675
+tpe_transform took 0.001664 seconds
+TPE using 65/65 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.54        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.98  0.96  0.89  0.93
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.637887848032
+tpe_transform took 0.001700 seconds
+TPE using 66/66 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.06        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.98  0.95  0.86  0.90
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.637887848032
+tpe_transform took 0.001687 seconds
+TPE using 67/67 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.64        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.95  0.87  0.63  0.73
+dev           1    0.85  0.64  0.22  0.33
+mean:0.33 std:0.00
+f1:0.33
+
+job returned status: ok
+job returned loss: 0.671351742215
+tpe_transform took 0.001695 seconds
+TPE using 68/68 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    9.00        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.643968701824
+tpe_transform took 0.001652 seconds
+TPE using 69/69 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.64        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.98  0.95  0.84  0.89
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.643968701824
+tpe_transform took 0.001703 seconds
+TPE using 70/70 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    9.34        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.96  0.90  0.71  0.79
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650162895002
+tpe_transform took 0.001703 seconds
+TPE using 71/71 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    9.96        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.87  0.69  0.00  0.00
+dev           1    0.86  0.65  0.00  0.00
+mean:0.00 std:0.00
+f1:0.00
+
+job returned status: ok
+job returned loss: 1.0
+tpe_transform took 0.001708 seconds
+TPE using 72/72 trials with best loss 0.637226
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.57        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.97  0.92  0.94
+dev           1    0.85  0.65  0.26  0.37
+mean:0.37 std:0.00
+f1:0.37
+
+job returned status: ok
+job returned loss: 0.631573649319
+tpe_transform took 0.001712 seconds
+TPE using 73/73 trials with best loss 0.631574
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    8.44        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.86  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.656179084374
+tpe_transform took 0.001702 seconds
+TPE using 74/74 trials with best loss 0.631574
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    8.15        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.91  0.79  0.35  0.49
+dev           1    0.85  0.64  0.15  0.24
+mean:0.24 std:0.00
+f1:0.24
+
+job returned status: ok
+job returned loss: 0.760315374507
+tpe_transform took 0.001711 seconds
+TPE using 75/75 trials with best loss 0.631574
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    9.05        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.90  0.75  0.23  0.35
+dev           1    0.86  0.65  0.12  0.21
+mean:0.21 std:0.00
+f1:0.21
+
+job returned status: ok
+job returned loss: 0.793335228318
+tpe_transform took 0.001715 seconds
+TPE using 76/76 trials with best loss 0.631574
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    7.44        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.96  0.90  0.71  0.80
+dev           1    0.85  0.65  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.657061963606
+tpe_transform took 0.001656 seconds
+TPE using 77/77 trials with best loss 0.631574
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.75        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  0.99  0.97  0.98
+dev           1    0.85  0.64  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.651713635154
+tpe_transform took 0.001709 seconds
+TPE using 78/78 trials with best loss 0.631574
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.98        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.27  0.38
+mean:0.38 std:0.00
+f1:0.38
+
+job returned status: ok
+job returned loss: 0.618466579107
+tpe_transform took 0.001685 seconds
+TPE using 79/79 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.97        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.27  0.38
+mean:0.38 std:0.00
+f1:0.38
+
+job returned status: ok
+job returned loss: 0.618466579107
+tpe_transform took 0.001697 seconds
+TPE using 80/80 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.99        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.26  0.38
+mean:0.38 std:0.00
+f1:0.38
+
+job returned status: ok
+job returned loss: 0.624989312281
+tpe_transform took 0.001654 seconds
+TPE using 81/81 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.77        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.85  0.64  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.651400504447
+tpe_transform took 0.001659 seconds
+TPE using 82/82 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.94        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.92  0.82  0.46  0.59
+dev           1    0.85  0.65  0.20  0.30
+mean:0.30 std:0.00
+f1:0.30
+
+job returned status: ok
+job returned loss: 0.6983958861
+tpe_transform took 0.001694 seconds
+TPE using 83/83 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    9.94        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.27  0.38
+mean:0.38 std:0.00
+f1:0.38
+
+job returned status: ok
+job returned loss: 0.618466579107
+tpe_transform took 0.001704 seconds
+TPE using 84/84 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    9.36        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  0.99
+dev           1    0.85  0.64  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.657657657658
+tpe_transform took 0.001653 seconds
+TPE using 85/85 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    2.82        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.98  0.96  0.87  0.91
+dev           1    0.85  0.65  0.18  0.29
+mean:0.29 std:0.00
+f1:0.29
+
+job returned status: ok
+job returned loss: 0.713088581175
+tpe_transform took 0.001701 seconds
+TPE using 86/86 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    8.55        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650778738458
+tpe_transform took 0.001658 seconds
+TPE using 87/87 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    5.22        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.22  0.33
+mean:0.33 std:0.00
+f1:0.33
+
+job returned status: ok
+job returned loss: 0.67025196545
+tpe_transform took 0.001703 seconds
+TPE using 88/88 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.98        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.66  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.655887593842
+tpe_transform took 0.001661 seconds
+TPE using 89/89 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    8.83        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.95  0.88  0.64  0.74
+dev           1    0.85  0.64  0.23  0.34
+mean:0.34 std:0.00
+f1:0.34
+
+job returned status: ok
+job returned loss: 0.664318968605
+tpe_transform took 0.001678 seconds
+TPE using 90/90 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    6.86        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  0.99  1.00
+dev           1    0.86  0.66  0.22  0.33
+mean:0.33 std:0.00
+f1:0.33
+
+job returned status: ok
+job returned loss: 0.66864183735
+tpe_transform took 0.001707 seconds
+TPE using 91/91 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.02  mikolovWikipedia100.embeddings    8.32        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.93  0.95
+dev           1    0.85  0.65  0.25  0.36
+mean:0.36 std:0.00
+f1:0.36
+
+job returned status: ok
+job returned loss: 0.643968701824
+tpe_transform took 0.001698 seconds
+TPE using 92/92 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.05  mikolovWikipedia100.embeddings    9.24        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.23  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.654735380075
+tpe_transform took 0.001664 seconds
+TPE using 93/93 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.04  mikolovWikipedia100.embeddings    1.58        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.95  0.89  0.64  0.74
+dev           1    0.86  0.66  0.12  0.21
+mean:0.21 std:0.00
+f1:0.21
+
+job returned status: ok
+job returned loss: 0.793229948307
+tpe_transform took 0.001718 seconds
+TPE using 94/94 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    3.71        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.92  0.82  0.44  0.57
+dev           1    0.85  0.65  0.15  0.24
+mean:0.24 std:0.00
+f1:0.24
+
+job returned status: ok
+job returned loss: 0.759734772151
+tpe_transform took 0.001709 seconds
+TPE using 95/95 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    2.52        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.86  0.66  0.17  0.27
+mean:0.27 std:0.00
+f1:0.27
+
+job returned status: ok
+job returned loss: 0.727306779873
+tpe_transform took 0.001679 seconds
+TPE using 96/96 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.01  mikolovWikipedia100.embeddings    7.58        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.92  0.81  0.43  0.56
+dev           1    0.85  0.65  0.18  0.28
+mean:0.28 std:0.00
+f1:0.28
+
+job returned status: ok
+job returned loss: 0.720403180367
+tpe_transform took 0.001652 seconds
+TPE using 97/97 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.00  mikolovWikipedia100.embeddings    9.85        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.88  0.71  0.09  0.16
+dev           1    0.86  0.66  0.09  0.15
+mean:0.15 std:0.00
+f1:0.15
+
+job returned status: ok
+job returned loss: 0.84791851042
+tpe_transform took 0.001710 seconds
+TPE using 98/98 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.03  mikolovWikipedia100.embeddings    7.84        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    0.99  0.98  0.95  0.97
+dev           1    0.85  0.65  0.24  0.35
+mean:0.35 std:0.00
+f1:0.35
+
+job returned status: ok
+job returned loss: 0.650470081715
+tpe_transform took 0.001699 seconds
+TPE using 99/99 trials with best loss 0.618467
+  n_fold    kerncoef0    kerngamma  emb                               svmC    n_batch  kerntype      kerndegree    fepoch    anger    n_context
+--------  -----------  -----------  ------------------------------  ------  ---------  ----------  ------------  --------  -------  -----------
+       1            1         0.06  mikolovWikipedia100.embeddings    7.23        100  rbf                    2       100       20            2
+/ai/home/vcirik/embeddings/mikolovWikipedia100.embeddings
+fstart:0 fend:40
+Xtrn shape:(4237, 500)
+dset      epoch    wacc     p     r     f
+------  -------  ------  ----  ----  ----
+trn           1    1.00  1.00  1.00  1.00
+dev           1    0.86  0.67  0.21  0.32
+mean:0.32 std:0.00
+f1:0.32
+
+job returned status: ok
+job returned loss: 0.682162835903
+{'kerngamma': 0.021860208662649816, 'svmC': 9.9774441575328}
