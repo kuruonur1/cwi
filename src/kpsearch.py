@@ -43,13 +43,14 @@ def main(args):
     logging.critical(tabulate([args], headers='keys', floatfmt='.2f')+'\n')
     random.seed(0)
     defaults = {'emb': 'mikolovWikipedia100.embeddings',
-            'n_batch' : 100, 'n_fold' : 1, 'fepoch' : 100, 'anger' : 20, 'n_context' : 2,
-            'kerntype' : 'rbf', 'kerngamma' : 1, 'kerncoef0' : 1, 'kerndegree' : 2}
+            'clf' : 'svm', 'n_batch' : 100, 'n_fold' : 5, 'fepoch' : 100, 'anger' : 20, 'n_context' : 2,
+            'kerntype' : 'rbf', 'kerngamma' : 1, 'kerncoef0' : 1, 'kerndegree' : 2, 'percentile' : 20}
 
     space = {
-            # 'kerngamma' : hp.normal('kerngamma', 5, 2),
-            'svmC' : hp.uniform('svmC', 1, 10),
-            'kerngamma' : hp.uniform('kerngamma', .00001, .1),
+            'kerngamma' : hp.normal('kerngamma', .2, .1),
+            'C' : hp.uniform('C', 0, 3),
+            'percentile' : hp.normal('percentile', 20, 5),
+            # 'kerngamma' : hp.uniform('kerngamma', .00001, .1),
     }
 
     from kpcwi import xvalidate

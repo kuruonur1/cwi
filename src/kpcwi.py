@@ -9,10 +9,13 @@ from itertools import *
 from tabulate import tabulate
 from collections import Counter
 
+from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
+from sklearn.svm import SVC, LinearSVC
+from sklearn.linear_model import PassiveAggressiveClassifier, SGDClassifier, Perceptron, LogisticRegression
+
 import utils
 import evaluate_system
 
-from kperceptron import KPerceptron
 
 def get_arg_parser():
     parser = argparse.ArgumentParser(prog="cwi")
@@ -24,6 +27,7 @@ def get_arg_parser():
     parser.add_argument("--fepoch", default=100, type=int, help="number of epochs")
     parser.add_argument("--patience", default=10, type=int, help="angerrr")
     parser.add_argument("--log", default='nothing', help="log file name")
+    parser.add_argument("--percentile", default=20, type=int, help="percentile for feature selection")
 
 
     parser.add_argument("--clf", default='per', help="clf type")
@@ -37,7 +41,7 @@ def get_arg_parser():
     return parser
 
 def xvalidate(dset, args):
-    vocab = set(w for sent in dset for w in sent['ws'])
+    vocab = Counter(w for sent in dset for w in sent['ws'])
     emb = EmbRand() if args['emb'] == 'rand' else Emb(args['emb'], vocab)
     feat = Feat(emb)
     from sklearn.feature_extraction import DictVectorizer
@@ -65,75 +69,88 @@ def validate(trn, dev, dvec, feat, args):
     ydev = np.array([lbl for sent in dev for m,lbl in zip(sent['ii'],sent['ls']) if m])
     cweights = {0:(ytrn==1).sum()/ytrn.size, 1:(ytrn==0).sum()/ytrn.size}
 
+    logging.debug("num std 0:{}".format(np.sum(np.std(Xtrn, axis=0) == 0)))
     logging.debug('Xtrn shape:{}'.format(Xtrn.shape))
 
-    from sklearn.feature_selection import VarianceThreshold, SelectKBest, chi2, f_classif
+    """
+    from sklearn.ensemble import ExtraTreesClassifier
+    from sklearn.feature_selection import SelectFromModel
+    selclf = ExtraTreesClassifier()
+    selclf.fit(np.vstack((Xtrn,Xdev)), np.concatenate((ytrn,ydev)))
+    sel = SelectFromModel(selclf, prefit=True)
+    Xtrn, Xdev = sel.transform(Xtrn), sel.transform(Xdev)
+    """
 
-    sel = SelectKBest(f_classif, k=3000)
+    from sklearn.feature_selection import VarianceThreshold, SelectKBest, chi2, f_classif, SelectPercentile
+    # sel = SelectKBest(f_classif, k=3000)
+    sel = SelectPercentile(chi2, percentile=args['percentile'])
     # sel = VarianceThreshold(threshold=.01)
     sel.fit(np.vstack((Xtrn,Xdev)), np.concatenate((ytrn,ydev)))
     Xtrn, Xdev = sel.transform(Xtrn), sel.transform(Xdev)
     # logging.debug(sel.scores_)
+
     logging.debug('after sel: Xtrn:{} Xdev: {}'.format(Xtrn.shape, Xdev.shape))
-    logging.debug([(fea, score) for score, fea in islice(reversed(sorted(zip(sel.scores_, dvec.feature_names_))), 500)])
+    """
+    for score, fea in reversed(sorted(zip(sel.scores_, dvec.feature_names_))):
+        logging.debug('fea: {} score: {}'.format(fea,score))
+    """
+
+    # logging.debug([(fea, score) 
 
 
     # logging.debug('norm**2 mean:{}'.format(np.mean(np.linalg.norm(Xtrn-Xtrn[10],axis=1)**2)))
 
-    from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
-    from sklearn.svm import SVC, LinearSVC
-    from sklearn.linear_model import PassiveAggressiveClassifier, SGDClassifier, Perceptron, LogisticRegression
 
-    if args['clf'] == 'svm' or args['clf'] == 'lo':
-        if args['clf'] == 'lo':
-            clf = LogisticRegression(class_weight=cweights)
+    if args['clf'] == 'svm':
         if args['kerntype'] == 'lin':
             clf = LinearSVC(C=args['C'], class_weight=cweights)
         else:
             clf = SVC(class_weight=cweights, C=args['C'], kernel=args['kerntype'], gamma=args['kerngamma'], degree=args['kerndegree'])
-        clf.fit(Xtrn, ytrn)
+    elif args['clf'] == 'lo':
+        clf = LogisticRegression(class_weight=cweights)
+
+    clf.fit(Xtrn, ytrn)
+
+    yhat, acctrn = clf.predict(Xtrn), clf.score(Xtrn, ytrn)
+    row1 = list(evalu(trn, yhat)) # p, r, f
+
+    yhat, accdev = clf.predict(Xdev), clf.score(Xdev, ydev)
+    row2 = list(evalu(dev, yhat)) # p, r, f
+    rows = [['trn', acctrn] + row1, ['dev', accdev] + row2]
+    logging.debug(tabulate(rows, floatfmt='.2f', headers=['dset','wacc','p','r','f']))
+
+    f1=row2[-1]
+    return f1
+
+def valid_iter():
+    if args['clf'] == 'nb':
+        clf = GaussianNB()
+    elif args['clf'] == 'per':
+        logging.debug(cweights)
+        clf = Perceptron(class_weight=cweights, eta0=.1)
+    elif args['clf'] == 'sgd':
+        clf = SGDClassifier(penalty='elasticnet',class_weight=cweights)
+    elif args['clf'] == 'pac':
+        clf = PassiveAggressiveClassifier(C=args['C'], loss='hinge')
+    else:
+        raise Exception()
+
+    f1s = []
+    for e in range(1,args['fepoch']+1):
+        clf.partial_fit(Xtrn, ytrn, [0,1])
+        # clf.fit(Xtrn, ytrn)
 
         yhat, acctrn = clf.predict(Xtrn), clf.score(Xtrn, ytrn)
         row1 = list(evalu(trn, yhat)) # p, r, f
 
         yhat, accdev = clf.predict(Xdev), clf.score(Xdev, ydev)
         row2 = list(evalu(dev, yhat)) # p, r, f
-        rows = [['trn', acctrn] + row1, ['dev', accdev] + row2]
-        logging.debug(tabulate(rows, floatfmt='.2f', headers=['dset','wacc','p','r','f']))
+        f1s.append((row2[-1],e))
+        rows = [['trn',e, acctrn] + row1, ['dev',e, accdev] + row2]
+        logging.debug(tabulate(rows, floatfmt='.2f', headers=['dset','epoch','wacc','p','r','f']))
 
-        max_f1=row2[-1]
-    else:
-        if args['clf'] == 'nb':
-            clf = GaussianNB()
-        elif args['clf'] == 'kper':
-            clf = KPerceptron(kerntype=args['kerntype'],kerngamma=args['kerngamma'],
-                    kerndegree=args['kerndegree'], kerncoef0=args['kerncoef0'], ybias=1)
-        elif args['clf'] == 'per':
-            logging.debug(cweights)
-            clf = Perceptron(class_weight=cweights, eta0=.1)
-        elif args['clf'] == 'sgd':
-            clf = SGDClassifier(penalty='elasticnet',class_weight=cweights)
-        elif args['clf'] == 'pac':
-            clf = PassiveAggressiveClassifier(C=args['C'], loss='hinge')
-        else:
-            raise Exception()
-
-        f1s = []
-        for e in range(1,args['fepoch']+1):
-            clf.partial_fit(Xtrn, ytrn, [0,1])
-            # clf.fit(Xtrn, ytrn)
-
-            yhat, acctrn = clf.predict(Xtrn), clf.score(Xtrn, ytrn)
-            row1 = list(evalu(trn, yhat)) # p, r, f
-
-            yhat, accdev = clf.predict(Xdev), clf.score(Xdev, ydev)
-            row2 = list(evalu(dev, yhat)) # p, r, f
-            f1s.append((row2[-1],e))
-            rows = [['trn',e, acctrn] + row1, ['dev',e, accdev] + row2]
-            logging.debug(tabulate(rows, floatfmt='.2f', headers=['dset','epoch','wacc','p','r','f']))
-
-            if e - max(f1s)[1] > args['patience']: break
-        max_f1 = max(f1s)[0]
+        if e - max(f1s)[1] > args['patience']: break
+    max_f1 = max(f1s)[0]
     return max_f1
 
 def setup_logger(args):
@@ -201,7 +218,8 @@ class Feat(object):
         # featd = dict(('e%d'%fi, fv) for fi, fv in enumerate(fv for w in ws_padded[(i-c):(i+c+1)] for fv in self.emb.get_w(w)))
 
         featd.update(('substr%d'%j, w[:j]) for j in range(1,len(w)))
-        # featd.update(('w%d'%j, ws_padded[i+j]) for j in range(-c,c+1))
+        # featd['cntxt'] = ' '.join([ws_padded[i+j] for j in range(-c,c+1)])
+        featd.update(('w%d'%j, ws_padded[i+j]) for j in range(-c,c+1))
         return featd
 
     
@@ -222,8 +240,6 @@ def evalu(dset, yhat):
         pred_labels.extend(pred)
     p, r, f = evaluate_system.evaluateIdentifier(gold_labels, pred_labels)
     return p,r,f
-
-            
 
 def main():
     random.seed(0)

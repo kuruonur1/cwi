@@ -22,6 +22,26 @@ def get_dset():
         sent['eseq'] = [int(c=='w/') for w in sent['ws'] for e, c in enumerate(chain(['\w'],w,['w/']))]
     return trn
 
+def get_test():
+    s2tuples = dd(list)
+    with open('data/cwi_testing.txt') as src:
+        lines = [l.strip().split('\t') for l in src]
+    for s,w,i in lines:
+        s2tuples[s].append((int(i),w,0))
+
+    for tuples in s2tuples.itervalues():
+        tuples.sort()
+
+    tst = [st2sent(s,tuples) for s, tuples in s2tuples.items()]
+    """
+    for sent in tst:
+        sent['cseq'] = [c for w in sent['ws'] for c in chain(['\w'],w,['w/'])]
+        sent['wiseq'] = [wi for wi,w in enumerate(sent['ws']) for c in chain(['\w'],w,['w/'])]
+        sent['lseq'] = [l for w,l in zip(sent['ws'],sent['ls']) for c in chain(['\w'],w,['w/'])]
+        sent['eseq'] = [int(c=='w/') for w in sent['ws'] for e, c in enumerate(chain(['\w'],w,['w/']))]
+    """
+    return tst
+
 def st2sent(s,tuples):
     sent = {}
     sent['ws'] = s.split(' ')
@@ -58,5 +78,9 @@ def stats(s2tuples):
 if __name__ == '__main__':
     import random
     trn = get_dset()
-    subvocab = set(w[:e] for sent in trn for w in sent['ws'] for e in range(1,len(w)))
-    print len(subvocab)
+    tst = get_test()
+    print len(tst)
+    pprint_word(tst[0])
+
+
+
