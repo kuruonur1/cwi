@@ -12,6 +12,7 @@ from collections import Counter
 from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
 from sklearn.svm import SVC, LinearSVC
 from sklearn.linear_model import PassiveAggressiveClassifier, SGDClassifier, Perceptron, LogisticRegression
+from sklearn.feature_extraction import DictVectorizer
 
 import utils
 import evaluate_system
@@ -28,27 +29,21 @@ def get_arg_parser():
     parser.add_argument("--patience", default=10, type=int, help="angerrr")
     parser.add_argument("--log", default='nothing', help="log file name")
     parser.add_argument("--percentile", default=20, type=int, help="percentile for feature selection")
+    parser.add_argument("--cweights", default=1, type=int, help="use cweights")
+    parser.add_argument("--unkt", default=2, type=int, help="unk threshold")
 
 
-    parser.add_argument("--clf", default='per', help="clf type")
-    parser.add_argument("--kerntype", default='poly', choices=['lin','poly','rbf'],  help="kernel type")
+    parser.add_argument("--clf", default='svm', help="clf type")
+    parser.add_argument("--kerntype", default='lin', choices=['lin','poly','rbf'],  help="kernel type")
     parser.add_argument("--kerngamma", default=1., type=float, help="poly or rbf gamma")
     parser.add_argument("--kerncoef0", default=1., type=float, help="poly kernel coef0")
     parser.add_argument("--kerndegree", default=2, type=int, help="poly kernel degree")
 
-    parser.add_argument("--C", default=1., type=float, help="C for SVC")
+    parser.add_argument("--C", default=.0001, type=float, help="C for SVC")
 
     return parser
 
 def xvalidate(dset, args):
-    vocab = Counter(w for sent in dset for w in sent['ws'])
-    emb = EmbRand() if args['emb'] == 'rand' else Emb(args['emb'], vocab)
-    feat = Feat(emb)
-    from sklearn.feature_extraction import DictVectorizer
-    dvec = DictVectorizer(sparse=False)
-    dvec.fit(feat.get_features(i, sent) for sent in dset for i,w in enumerate(sent['ws']))
-    # logging.debug(dvec.feature_names_)
-
     fold_indxs = [0,40] if args['n_fold'] == 1 else range(0,len(dset),int(np.ceil(len(dset)/args['n_fold']))) + [len(dset)]
     fold_scores = []
     for fstart, fend in zip(fold_indxs, fold_indxs[1:]):
@@ -56,21 +51,36 @@ def xvalidate(dset, args):
         trn = dset[:fstart] + dset[fend:]
         dev = dset[fstart:fend]
 
-        f = validate(trn, dev, dvec, feat, args)
+        f = validate(trn, dev, args)
         fold_scores.append(f)
     f1mean, f1std = np.mean(fold_scores), np.std(fold_scores)
     logging.debug('mean:{:.2f} std:{:.2f}'.format(f1mean, f1std))
     return f1mean, f1std
 
-def validate(trn, dev, dvec, feat, args):
-    Xtrn = dvec.transform(feat.get_features(i, sent) for sent in trn for m,(i,w) in zip(sent['ii'],enumerate(sent['ws'])) if m)
+def validate(trn, dev, args):
+    feat = Feat(trn, unkt=args['unkt'])
+    dvec = DictVectorizer(sparse=False)
+    # dvec.fit(feat.get_features(i, sent) for sent in trn for i,w in enumerate(sent['ws']))
+
+    Xtrn = dvec.fit_transform(feat.get_features(i, sent) for sent in trn for m,(i,w) in zip(sent['ii'],enumerate(sent['ws'])) if m)
     Xdev = dvec.transform(feat.get_features(i, sent) for sent in dev for m,(i,w) in zip(sent['ii'],enumerate(sent['ws'])) if m)
     ytrn = np.array([lbl for sent in trn for m,lbl in zip(sent['ii'],sent['ls']) if m])
     ydev = np.array([lbl for sent in dev for m,lbl in zip(sent['ii'],sent['ls']) if m])
-    cweights = {0:(ytrn==1).sum()/ytrn.size, 1:(ytrn==0).sum()/ytrn.size}
-
-    logging.debug("num std 0:{}".format(np.sum(np.std(Xtrn, axis=0) == 0)))
+    cweights = {0:(ytrn==1).sum()/ytrn.size, 1:(ytrn==0).sum()/ytrn.size} if args['cweights'] else {0:1,1:1}
     logging.debug('Xtrn shape:{}'.format(Xtrn.shape))
+    logging.debug('Xdev shape:{}'.format(Xdev.shape))
+
+
+    assert (Xtrn.std(axis=0)==0).sum() == 0
+    """
+    logging.debug('features with 0 std')
+    logging.debug(np.array(dvec.feature_names_)[(np.std(Xtrn, axis=0) == 0).nonzero()])
+    logging.debug(Xtrn[:, Xtrn.std(axis=0)==0].sum(axis=0)) 
+    logging.debug(np.array(dvec.feature_names_)[(np.std(Xtrn, axis=0) == 0).nonzero()].size)
+    logging.debug('{} sum of cols with std 0'.format(np.sum(Xtrn[:, np.std(Xtrn, axis=0) == 0], axis=0)))
+    
+    logging.debug("num std 0:{}".format(np.sum(np.std(Xtrn, axis=0) == 0)))
+    """
 
     """
     from sklearn.ensemble import ExtraTreesClassifier
@@ -82,23 +92,18 @@ def validate(trn, dev, dvec, feat, args):
     """
 
     from sklearn.feature_selection import VarianceThreshold, SelectKBest, chi2, f_classif, SelectPercentile
-    # sel = SelectKBest(f_classif, k=3000)
+    sel1 = VarianceThreshold()
+    Xtrn = sel1.fit_transform(Xtrn)
+    Xdev = Xdev[:,(sel1.variances_ > 0)]
+    logging.debug('after variance threshold Xtrn shape:{}'.format(Xtrn.shape))
+    logging.debug('after variance threshold Xdev shape:{}'.format(Xdev.shape))
+
     sel = SelectPercentile(chi2, percentile=args['percentile'])
-    # sel = VarianceThreshold(threshold=.01)
-    sel.fit(np.vstack((Xtrn,Xdev)), np.concatenate((ytrn,ydev)))
-    Xtrn, Xdev = sel.transform(Xtrn), sel.transform(Xdev)
-    # logging.debug(sel.scores_)
+    Xtrn, Xdev = sel.fit_transform(Xtrn, ytrn), sel.transform(Xdev)
 
     logging.debug('after sel: Xtrn:{} Xdev: {}'.format(Xtrn.shape, Xdev.shape))
-    """
-    for score, fea in reversed(sorted(zip(sel.scores_, dvec.feature_names_))):
+    for score, fea in islice(reversed(sorted(zip(sel.scores_, dvec.feature_names_))), 100):
         logging.debug('fea: {} score: {}'.format(fea,score))
-    """
-
-    # logging.debug([(fea, score) 
-
-
-    # logging.debug('norm**2 mean:{}'.format(np.mean(np.linalg.norm(Xtrn-Xtrn[10],axis=1)**2)))
 
 
     if args['clf'] == 'svm':
@@ -207,19 +212,30 @@ class Emb(object):
 
 class Feat(object):
 
-    def __init__(self, emb):
-        self.emb = emb
+    def __init__(self, dset, unkt=2):
+        self.wcounts = Counter(w for sent in dset for w in sent['ws'])
+        self.subcounts = Counter(w[:j] for sent in dset for w in sent['ws'] for j in range(1,len(w)-1))
+        self.unkt = unkt
+        # self.emb = emb
 
-    def get_features(self, i, sent, c=2):
+    def get_w(self, w):
+        return w if self.wcounts[w] > self.unkt else '<unk>'
+
+    def get_sub(self, sub):
+        return sub if self.subcounts[sub] > self.unkt else '<unksub>'
+
+    def get_features(self, i, sent, knn=2):
         featd = {}
         w = sent['ws'][i]
 
-        ws_padded = (['<s>']*c) + sent['ws'] + (['</s>']*c)
+        ws_padded = (['<s>']*knn) + sent['ws'] + (['</s>']*knn)
         # featd = dict(('e%d'%fi, fv) for fi, fv in enumerate(fv for w in ws_padded[(i-c):(i+c+1)] for fv in self.emb.get_w(w)))
 
-        featd.update(('substr%d'%j, w[:j]) for j in range(1,len(w)))
-        # featd['cntxt'] = ' '.join([ws_padded[i+j] for j in range(-c,c+1)])
-        featd.update(('w%d'%j, ws_padded[i+j]) for j in range(-c,c+1))
+        featd['w'] = self.get_w(w)
+        # featd['containsHyphen'] = '-' in w
+        featd.update(('substr%d'%j, self.get_sub(w[:j])) for j in range(1,len(w)-1))
+        featd.update(('w%d'%j, self.get_w(ws_padded[i+j])) for j in range(-knn,0) + range(1,knn+1))
+        # featd['cntxt'] = ' '.join([ws_padded[i+j] for j in range(-knn,knn+1)])
         return featd
 
     

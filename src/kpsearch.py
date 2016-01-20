@@ -47,9 +47,10 @@ def main(args):
             'kerntype' : 'rbf', 'kerngamma' : 1, 'kerncoef0' : 1, 'kerndegree' : 2, 'percentile' : 20}
 
     space = {
-            'kerngamma' : hp.normal('kerngamma', .2, .1),
+            'kerngamma' : hp.normal('kerngamma', .2, .07),
             'C' : hp.uniform('C', 0, 3),
-            'percentile' : hp.normal('percentile', 20, 5),
+            'percentile' : hp.uniform('percentile', 10, 100),
+            # 'percentile' : hp.normal('percentile', 20, 5),
             # 'kerngamma' : hp.uniform('kerngamma', .00001, .1),
     }
 
