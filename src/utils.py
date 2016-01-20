@@ -15,32 +15,25 @@ def get_dset():
         tuples.sort()
 
     trn = [st2sent(s,tuples) for s, tuples in s2tuples.items()]
-    for sent in trn:
-        sent['cseq'] = [c for w in sent['ws'] for c in chain(['\w'],w,['w/'])]
-        sent['wiseq'] = [wi for wi,w in enumerate(sent['ws']) for c in chain(['\w'],w,['w/'])]
-        sent['lseq'] = [l for w,l in zip(sent['ws'],sent['ls']) for c in chain(['\w'],w,['w/'])]
-        sent['eseq'] = [int(c=='w/') for w in sent['ws'] for e, c in enumerate(chain(['\w'],w,['w/']))]
     return trn
 
 def get_test():
     s2tuples = dd(list)
     with open('data/cwi_testing.txt') as src:
         lines = [l.strip().split('\t') for l in src]
-    for s,w,i in lines:
-        s2tuples[s].append((int(i),w,0))
 
-    for tuples in s2tuples.itervalues():
-        tuples.sort()
-
-    tst = [st2sent(s,tuples) for s, tuples in s2tuples.items()]
-    """
-    for sent in tst:
-        sent['cseq'] = [c for w in sent['ws'] for c in chain(['\w'],w,['w/'])]
-        sent['wiseq'] = [wi for wi,w in enumerate(sent['ws']) for c in chain(['\w'],w,['w/'])]
-        sent['lseq'] = [l for w,l in zip(sent['ws'],sent['ls']) for c in chain(['\w'],w,['w/'])]
-        sent['eseq'] = [int(c=='w/') for w in sent['ws'] for e, c in enumerate(chain(['\w'],w,['w/']))]
-    """
+    prevs = 'asdf'
+    tuples = []
+    tst = []
+    for curs,w,i in lines:
+        if prevs != curs and len(tuples) > 0:
+            tst.append(st2sent(prevs, tuples))
+            tuples = []
+        tuples.append((int(i),w,0))
+        prevs = curs
+    tst.append(st2sent(prevs, tuples))
     return tst
+
 
 def st2sent(s,tuples):
     sent = {}
@@ -54,9 +47,6 @@ def st2sent(s,tuples):
 
 def pprint_word(sent):
     print tabulate([sent['ws'],sent['ls'],sent['ii']])
-
-def pprint_char(sent):
-    print tabulate([sent['cseq'][:40],sent['wiseq'][:40],sent['lseq'][:40],sent['eseq'][:40]])
 
 def stats(s2tuples):
     print '----'
@@ -80,6 +70,9 @@ if __name__ == '__main__':
     trn = get_dset()
     tst = get_test()
     print len(tst)
+    print 'trn len:', sum(sum(sent['ii']) for sent in trn)
+    print 'tst len:', sum(sum(sent['ii']) for sent in tst)
+    print 'tst len:', len([w for sent in tst for m, w in zip(sent['ii'], sent['ws']) if m])
     pprint_word(tst[0])
 
 
