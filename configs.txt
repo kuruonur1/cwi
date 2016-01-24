@@ -1,1 +1,0 @@
-python src/kpcwi.py --clf svm --kerntype lin --C .00001
