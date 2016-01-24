@@ -3,6 +3,8 @@ from itertools import *
 from tabulate import tabulate
 from collections import defaultdict as dd
 
+EMB_DIR ='/ai/home/vcirik/embeddings' 
+
 
 def get_dset():
     s2tuples = dd(list)
@@ -74,6 +76,11 @@ if __name__ == '__main__':
     print 'tst len:', sum(sum(sent['ii']) for sent in tst)
     print 'tst len:', len([w for sent in tst for m, w in zip(sent['ii'], sent['ws']) if m])
     pprint_word(tst[0])
+
+    sent_lens = [len(sent['ws']) for sent in trn]
+    logging.debug('# of words per sent, min:{} max:{} mean:{:.2f} std:{:.2f}'.format(min(sent_lens), max(sent_lens), np.mean(sent_lens), np.std(sent_lens)))
+    sent = trn[0]
+    pprint_word(sent)
 
 
 
