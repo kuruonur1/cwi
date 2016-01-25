@@ -1,13 +1,12 @@
   evals  log
--------  -----
-    100  auto
+-------  ------
+    100  search
 
-tpe_transform took 0.002513 seconds
+tpe_transform took 0.002190 seconds
 TPE using 0 trials
 generating trials for new_ids: [0]
   n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
 --------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
-       5            1           1     6.22e-06            0  svm    1.18e-06      3.63e+01  rbf                    2       2  ['s50', 'g50']  spn
+       5            1           1     7.07e-03            0  svm    8.69e-03      2.24e+01  rbf                    2       2  ['s50', 'g50']  spn
 fstart:0 fend:40
 /ai/home/vcirik/embeddings/wikipedia2MUNK-50.embeddings
-/ai/home/vcirik/embeddings/glove6B-50.embeddings

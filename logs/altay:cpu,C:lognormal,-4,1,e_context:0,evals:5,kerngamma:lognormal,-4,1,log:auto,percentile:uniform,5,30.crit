@@ -1,0 +1,7 @@
+  evals  C                     log    kerngamma               e_context  percentile
+-------  --------------------  -----  --------------------  -----------  ------------------
+      5  ['lognormal', -4, 1]  auto   ['lognormal', -4, 1]            0  ['uniform', 5, 30]
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     7.07e-03            0  svm    8.69e-03      2.24e+01  rbf                    2       2  ['s50', 'g50']  spn

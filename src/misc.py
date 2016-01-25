@@ -1,12 +1,22 @@
 from __future__ import division
 from collections import Counter
-from utils import get_dset, get_test
+from utils import get_dset, get_test, pprint_word
 
 def get_tagged_vocab(dset):
     return set(w for sent in dset for w,m in zip(sent['ws'],sent['ii']) if m)
 
 def get_vocab(dset):
     return set(w for sent in dset for w in sent['ws'])
+
+def get_contexts(sent, c):
+    ws = (['<s>']*c) + sent['ws'] + (['</s>']*c)
+
+    contexts = []
+    for i, w in enumerate(sent['ws']):
+        wi = i + c
+        if sent['ii'][i]:
+            contexts.append(' '.join([w for w in ws[wi-c:wi] + ['___'] + ws[wi+1:wi+c+1]]))
+    return contexts
 
 if __name__ == '__main__':
     trn = get_dset()
@@ -21,25 +31,20 @@ if __name__ == '__main__':
     vtrn, vtst = map(get_vocab, [trn,tst])
     print 'vtst diff: {:.2f}'.format( len(vtst.difference(vtrn)) / len(vtst) )
 
-    precnt = Counter(w[:j] for sent in trn for w, lbl in zip(sent['ws'],sent['ls']) for j in range(2,5) if lbl==1 and len(w)>j)
-    sufcnt = Counter(w[-j:] for sent in trn for w, lbl in zip(sent['ws'],sent['ls']) for j in range(2,5) if lbl==1 and len(w)>j)
-    print precnt.most_common(100)
-    print sufcnt.most_common(100)
+    precnt = Counter(w[:j] for sent in trn for w, lbl in zip(sent['ws'],sent['ls']) for j in range(3,5) if lbl==1 and len(w)>j)
+    sufcnt = Counter(w[-j:] for sent in trn for w, lbl in zip(sent['ws'],sent['ls']) for j in range(3,5) if lbl==1 and len(w)>j)
+    print 'most common prefixes:', precnt.most_common(100)
+    print 'most common suffixes:', sufcnt.most_common(100)
 
-    """
-    with open('data/cwi_training.txt') as src:
-        lines = (l.strip().split('\t') for l in src)
-        cw = set(l[1] for l in lines if l[-1] == '1')
-        print len(cw)
-        print list(cw)[:5]
-    with open('/ai/home/vcirik/embeddings/wikipedia2MUNK-100.embeddings') as src:
-        emb_words = set(l.strip().split(' ')[0] for l in src)
-        print len(emb_words)
-        print list(emb_words)[:5]
-    print len(cw.difference(emb_words)) / len(cw)
-    print cw.difference(emb_words)
+    trn_tagged_wcounts = Counter(w for sent in trn for w, lbl, m in zip(sent['ws'],sent['ls'],sent['ii']) if m)
+    print 'perc of words appers 1+ in trn:', sum(c for w,c in trn_tagged_wcounts.iteritems() if c > 1) / sum(c for w,c in trn_tagged_wcounts.iteritems())
 
-    with open('data/cwi_testing.txt') as src:
-        cw_test = set(l.strip().split('\t')[1] for l in src)
-    print len(cw_test.difference(emb_words)) / len(cw_test)
-    """
+    tst_tagged_wcounts = Counter(w for sent in tst for w, lbl, m in zip(sent['ws'],sent['ls'],sent['ii']) if m)
+    print 'most common tst_tagged_wcounts:', tst_tagged_wcounts.most_common(100)
+    print 'perc of words appers 1+ in tst:', sum(c for w,c in tst_tagged_wcounts.iteritems() if c > 1) / sum(c for w,c in tst_tagged_wcounts.iteritems())
+
+    context_counts = Counter(context for sent in trn for context in get_contexts(sent, 1))
+    print 'most common contexts in trn:', context_counts.most_common(100)
+
+    context_counts = Counter(context for sent in tst for context in get_contexts(sent, 1))
+    print 'most common contexts in tst:', context_counts.most_common(100)
