@@ -39,7 +39,7 @@ def get_arg_parser():
     
     parser.add_argument("--n_fold", default=5, type=int, help="batch size")
 
-    parser.add_argument("--embs", nargs='+', default=['m100'], help="embeddings to use")
+    parser.add_argument("--embs", nargs='+', default=['s50','g50'], help="embeddings to use")
     parser.add_argument("--e_context", default=0, type=int, help="num of words around token")
     parser.add_argument("--feats", default='', help="which feats to use")
     parser.add_argument("--percentile", default=20, type=int, help="percentile for feature selection")
@@ -270,7 +270,7 @@ if __name__ == '__main__':
         tst = utils.get_test()
         ytrn, ytst = fit_predict(trn, tst, args, Emb(trn+tst))
         with open(args['testf'], 'w') as out:
-            for y in ytrn: out.write('%d\n'%y)
+            out.write('\n'.join([str(y) for y in ytst]))
     else:
         dset = utils.get_dset()
         # random.shuffle(dset)
