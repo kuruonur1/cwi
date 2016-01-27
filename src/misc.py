@@ -23,13 +23,13 @@ if __name__ == '__main__':
     tst = get_test()
     print map(len, map(get_tagged_vocab, [trn,tst]))
     print 'tagged vocab size trn {} tst {}'.format(*map(len, map(get_tagged_vocab, [trn,tst])))
-    print 'vocab size trn {} tst {}'.format(*map(len, map(get_vocab, [trn,tst])))
+    print 'all vocab size trn {} tst {}'.format(*map(len, map(get_vocab, [trn,tst])))
 
     vtrn, vtst = map(get_tagged_vocab, [trn,tst])
-    print 'vtst diff: {:.2f}'.format( len(vtst.difference(vtrn)) / len(vtst) )
+    print 'tagged vtst diff: {:.2f}'.format( len(vtst.difference(vtrn)) / len(vtst) )
 
     vtrn, vtst = map(get_vocab, [trn,tst])
-    print 'vtst diff: {:.2f}'.format( len(vtst.difference(vtrn)) / len(vtst) )
+    print 'all vtst diff: {:.2f}'.format( len(vtst.difference(vtrn)) / len(vtst) )
 
     precnt = Counter(w[:j] for sent in trn for w, lbl in zip(sent['ws'],sent['ls']) for j in range(3,5) if lbl==1 and len(w)>j)
     sufcnt = Counter(w[-j:] for sent in trn for w, lbl in zip(sent['ws'],sent['ls']) for j in range(3,5) if lbl==1 and len(w)>j)

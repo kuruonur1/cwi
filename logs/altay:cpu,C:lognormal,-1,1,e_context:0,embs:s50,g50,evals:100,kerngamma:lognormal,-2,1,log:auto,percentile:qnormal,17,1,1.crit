@@ -1,0 +1,507 @@
+  evals  C                         log    kerngamma                   e_context  percentile                   embs
+-------  ------------------------  -----  ------------------------  -----------  ---------------------------  --------------
+    100  ['lognormal', '-1', '1']  auto   ['lognormal', '-2', '1']            0  ['qnormal', '17', '1', '1']  ['s50', 'g50']
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     3.67e-01            0  svm    4.88e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.52e-02            0  svm    9.65e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.37e-01            0  svm    1.43e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     5.50e-01            0  svm    2.04e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.56 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.39e-01            0  svm    6.46e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.63 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     2.51e-01            0  svm    7.40e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     2.22e-01            0  svm    1.72e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.61 f1std:0.01
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     6.00e-02            0  svm    1.29e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.57e-01            0  svm    1.79e+00      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.50 f1std:0.01
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     4.94e-01            0  svm    6.03e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.64 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.08e-01            0  svm    1.89e+00      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.52 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     5.15e-01            0  svm    8.89e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.12 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     4.42e-01            0  svm    5.25e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.64 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.16e-01            0  svm    2.23e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     3.93e-01            0  svm    3.36e+01      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.13 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     3.76e-01            0  svm    5.08e-01      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.28e-01            0  svm    2.73e-01      1.90e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.82e-01            0  svm    4.43e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     3.15e-01            0  svm    3.35e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.62 f1std:0.01
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     3.34e-01            0  svm    1.01e+00      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.12 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.72e-02            0  svm    3.43e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.08e-02            0  svm    7.97e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.11e-02            0  svm    7.16e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     6.62e-02            0  svm    9.33e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.04e-01            0  svm    4.87e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.64 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     4.59e-02            0  svm    2.14e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.14e-01            0  svm    1.14e-01      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.89e-02            0  svm    3.01e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     6.74e-02            0  svm    5.67e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     7.74e-02            0  svm    1.26e-02      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.60 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.02e-01            0  svm    2.44e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.65e-02            0  svm    2.25e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.37e+00            0  svm    2.48e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.56 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.60e-02            0  svm    1.86e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.00e-01            0  svm    1.66e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     7.52e-02            0  svm    2.46e-01      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.48e-01            0  svm    4.07e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.32e-01            0  svm    3.09e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.18e-01            0  svm    1.93e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     5.01e-02            0  svm    1.57e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.20e-02            0  svm    2.38e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.72e-01            0  svm    2.62e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.23e-01            0  svm    2.02e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.09e-01            0  svm    2.89e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.49e-01            0  svm    3.48e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.09e-01            0  svm    2.88e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     7.20e-01            0  svm    2.75e-01      1.40e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.58 f1std:0.01
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.38e-01            0  svm    3.39e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.10e-01            0  svm    3.10e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     2.13e-01            0  svm    3.80e-01      1.40e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     3.20e-02            0  svm    2.33e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.31e-02            0  svm    1.27e+00      1.40e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.58 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.04e-01            0  svm    2.63e-01      1.30e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.23e-01            0  svm    3.21e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.67e-02            0  svm    2.87e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.43e-01            0  svm    3.75e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.62e-01            0  svm    4.35e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     7.36e-02            0  svm    2.11e-01      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     2.70e-01            0  svm    5.73e-01      1.40e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.32e-01            0  svm    6.87e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.62 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.10e-02            0  svm    1.83e-01      1.90e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.00e-01            0  svm    3.58e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.13e-01            0  svm    2.59e-01      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.21e-01            0  svm    4.37e+00      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.52 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.90e-01            0  svm    2.24e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.63 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.07e-01            0  svm    3.15e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.27e-01            0  svm    2.96e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.13e-01            0  svm    3.30e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.52e-02            0  svm    2.73e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.01e-01            0  svm    2.49e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.12e-01            0  svm    2.77e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.17e-01            0  svm    3.01e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.04e-01            0  svm    2.33e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.88e-02            0  svm    4.04e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.01
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.31e-02            0  svm    3.26e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.08e-01            0  svm    2.53e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.21e-01            0  svm    2.38e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.42e-02            0  svm    2.82e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.85e-02            0  svm    3.10e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.43e-01            0  svm    8.55e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.60 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.28e-01            0  svm    2.18e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     7.86e-02            0  svm    3.43e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.01
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     6.96e-02            0  svm    1.27e-01      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.10e-01            0  svm    3.97e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.02e-01            0  svm    4.66e-01      1.40e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.78e-02            0  svm    2.66e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.06e-01            0  svm    3.61e-01      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     6.20e-01            0  svm    2.03e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.56 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.33e-01            0  svm    2.99e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     9.23e-02            0  svm    2.85e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     5.42e-02            0  svm    1.35e+00      1.60e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.59 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.55e-01            0  svm    2.43e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.11e-01            0  svm    2.56e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     3.05e-02            0  svm    2.70e-01      1.30e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.66 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.30e-02            0  svm    2.08e-01      1.40e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.29e-01            0  svm    2.92e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.19e-01            0  svm    1.97e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.67 f1std:0.03
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.91e-02            0  svm    3.57e-01      1.70e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.65 f1std:0.02
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     1.15e-01            0  svm    3.08e-01      1.50e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.68 f1std:0.04
+
+  n_fold    kerncoef0    cweights    kerngamma    e_context  clf           C    percentile  kerntype      kerndegree    unkt  embs            feats
+--------  -----------  ----------  -----------  -----------  -----  --------  ------------  ----------  ------------  ------  --------------  -------
+       5            1           1     8.62e-02            0  svm    2.38e+00      1.80e+01  rbf                    2       2  ['s50', 'g50']  spn
+f1:0.51 f1std:0.03
+
+{'C': 0.24434869956332267, 'percentile': 17.0, 'kerngamma': 0.10186276212935008}
+f1:0.68 f1std:0.04
+

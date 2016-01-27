@@ -33,15 +33,15 @@ def setup_logger(args):
     logger.addHandler(dhandler);
 
 def get_arg_parser():
-    parser = argparse.ArgumentParser(prog="search")
+    parser = argparse.ArgumentParser(prog="search", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument("--log", default='auto', help="log file name")
     parser.add_argument("--evals", default=100, type=int, help="log file name")
-    parser.add_argument("--embs", nargs='+', default=['s50','g50']) 
+    parser.add_argument("--embs", nargs='+', default=['s50','g50'], help='which embs') 
     parser.add_argument("--e_context", default=0, type=int, help="e context")
-    parser.add_argument("--kerngamma", nargs='+', default=['lognormal',-4,1])
-    parser.add_argument("--C", nargs='+', default=['lognormal',-4,1])
-    parser.add_argument("--percentile", nargs='+', default=['normal',40,10])
+    parser.add_argument("--kerngamma", nargs='+', default=['loguniform',-15,5], help='gammas')
+    parser.add_argument("--C", nargs='+', default=['loguniform',-15,5], help='C distribution')
+    parser.add_argument("--percentile", nargs='+', default=['quniform',5,30,1], help='percentile distribution')
 
     return parser
 
@@ -55,12 +55,13 @@ def main(args):
     
     space = {
             # 'kerngamma' : hp.loguniform('kerngamma', -20, 8),
-            'kerngamma' : getattr(hp,args['kerngamma'][0])('kerngamma',args['kerngamma'][1], args['kerngamma'][2]),
-            'C' : getattr(hp,args['C'][0])('C',args['C'][1], args['C'][2]),
-            'percentile' : getattr(hp,args['percentile'][0])('percentile',args['percentile'][1], args['percentile'][2]),
+            'kerngamma' : getattr(hp, args['kerngamma'][0])('kerngamma', *map(int, args['kerngamma'][1:])),
+            'C' : getattr(hp,args['C'][0])('C', *map(int, args['C'][1:])),
+            'percentile' : getattr(hp,args['percentile'][0])('percentile', *map(int, args['percentile'][1:])),
+            # 'percentile' : hp.quniform('percentile', 5, 30,1),
+            # 'percentile' : getattr(hp,args['percentile'][0])('percentile',args['percentile'][1], args['percentile'][2]),
             # 'C' : hp.loguniform('C', -20, 8),
             # 'C' : hp.lognormal('C', -4, 1),
-            # 'percentile' : hp.uniform('percentile', 5, 30),
             # 'percentile' : hp.normal('percentile', 20, 5),
             # 'kerngamma' : hp.uniform('kerngamma', .00001, .1),
     }

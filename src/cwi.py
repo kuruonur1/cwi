@@ -35,7 +35,7 @@ def setup_logger(args):
 
 
 def get_arg_parser():
-    parser = argparse.ArgumentParser(prog="cwi")
+    parser = argparse.ArgumentParser(prog="cwi", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     
     parser.add_argument("--n_fold", default=5, type=int, help="batch size")
 
@@ -106,7 +106,7 @@ def fit_predict(trn, dev, args, emb):
         assert (Xtrn.std(axis=0)==0).sum() == 0
 
         if args['percentile'] < 100:
-            from sklearn.feature_selection import VarianceThreshold, SelectKBest, chi2, f_classif, SelectPercentile
+            from sklearn.feature_selection import chi2, f_classif, SelectPercentile
             sel = SelectPercentile(chi2, percentile=args['percentile'])
             Xtrn_feat, Xdev_feat = sel.fit_transform(Xtrn_feat, ytrn), sel.transform(Xdev_feat)
             logging.debug('after sel: Xtrnf:{} Xdevf: {}'.format(Xtrn_feat.shape, Xdev_feat.shape))
@@ -118,14 +118,10 @@ def fit_predict(trn, dev, args, emb):
 
 
     cweights = 'balanced' if args['cweights'] else {0:1,1:1}
-    if args['clf'] == 'svm':
-        if args['kerntype'] == 'lin':
-            clf = LinearSVC(C=args['C'], class_weight=cweights, random_state=rng)
-        else:
-            clf = SVC(class_weight=cweights, C=args['C'], kernel=args['kerntype'], gamma=args['kerngamma'], degree=args['kerndegree'], random_state=rng)
-    elif args['clf'] == 'lo':
-        clf = LogisticRegression(C=args['C'], class_weight=cweights)
-        raise Exception()
+    if args['kerntype'] == 'lin':
+        clf = LinearSVC(C=args['C'], class_weight=cweights, random_state=rng)
+    else:
+        clf = SVC(class_weight=cweights, C=args['C'], kernel=args['kerntype'], gamma=args['kerngamma'], degree=args['kerndegree'], random_state=rng)
 
     clf.fit(Xtrn, ytrn)
 
@@ -136,9 +132,6 @@ class Emb(object):
     def __init__(self, dset):
         self.eshort = {'s':'wikipedia2MUNK-','m':'mikolovWikipedia', 'g' : 'glove6B-', 'r' : 'random'}
         self.vocab = Counter(w for sent in dset for w in sent['ws'])
-        # self.n_context = args['e_context']
-        # self.embsdict = dict((fn,self.read_emb_file(fn)) for fn in args['load'])
-        # self.embdim = sum(len(embd['*UNKNOWN*']) for embd in self.embsdict.itervalues())
         self.embsdict = {}
 
     def read_emb_file(self, fname):
@@ -153,47 +146,30 @@ class Emb(object):
         if w == '<s>' or w == '</s>':
             embdim = sum(len(self.embsdict[ename]['*UNKNOWN*']) for ename in enames)
             return [0] * embdim
-            # return [0] * self.embdim
         else:
             emb = []
-            # for fn, embd in self.embsdict.iteritems():
             for ename in enames:
                 embd = self.embsdict[ename]
                 emb.extend(embd[w] if w in embd else embd['*UNKNOWN*'])
             return emb
 
-    """
-    def get_token(self, i, sent):
-        return self.get_w(sent['ws'][i])
-    """
-
     def get_context(self, i, sent, enames, c):
         self.embsdict.update((ename,self.read_emb_file(ename)) for ename in enames if not ename in self.embsdict)
-        # c = self.n_context
         ws_padded = (['<s>']*c) + sent['ws'] + (['</s>']*c)
-        # logging.debug(ws_padded)
         return [fi for w in ws_padded[i:i+c] + [ws_padded[i+c]] + ws_padded[i+c+1:i+c+c+1] for fi in self.get_w(w, enames)]
 
 class Feat(object):
 
     def __init__(self, dset, args):
-        # self.wcounts = Counter(w for sent in dset for w in sent['ws'])
         self.precounts = Counter(w[:j] for sent in dset for w in sent['ws'] for j in range(1,len(w)-1))
         self.sufcounts = Counter(w[-j:] for sent in dset for w in sent['ws'] for j in range(1,len(w)-1))
         self.unkt = args['unkt']
         self.feats = args['feats']
-        # self.n_context = args['w_context']
-        # self_ngrams = lambda w,n : 
-        # self.emb = emb
 
     def f_ngrams(self, w, n):
         # return [w[i:i+n] for i in xrange(len(w)-n+1)]
         return [w[i:i+n] for i in xrange(1,len(w)-n)]
 
-    """
-    def get_w(self, w):
-        return w if self.wcounts[w] > self.unkt else '<unk>'
-    """
 
     def get_pre(self, sub, j):
         return '<unkpre%d>'%j if self.precounts[sub] < self.unkt else sub
@@ -220,11 +196,11 @@ class Feat(object):
             featd['context'] =  ' '.join([self.get_w(w) for w in ws[wi-c:wi] + ['___'] + ws[wi+1:wi+c+1]])
         """
         if 'p' in self.feats:
-            # featd.update(('pre%d'%j, self.get_pre(w[:j])) for j in range(1,len(w)-1))
-            featd.update(('pre%d'%j, self.get_pre(w[:j],j)) for j in range(2,5) if len(w)>j)
+            # featd.update(('pre%d'%j, self.get_pre(w[:j],j)) for j in range(2,5) if len(w)>j)
+            featd.update(('pre%d'%j, w[:j]) for j in range(3,6) if len(w)>j)
         if 's' in self.feats:
-            # featd.update(('suf%d'%j, self.get_suf(w[:j])) for j in range(1,len(w)-1))
-            featd.update(('suf%d'%j, self.get_suf(w[-j:],j)) for j in range(2,5) if len(w)>j)
+            # featd.update(('suf%d'%j, self.get_suf(w[-j:],j)) for j in range(3,6) if len(w)>j)
+            featd.update(('suf%d'%j, w[-j:]) for j in range(3,6) if len(w)>j)
         if 'n' in self.feats:
             featd.update(('cngram%d'%j, ng) for j in range(3,6) for ng in self.f_ngrams(w,j) if len(w)-2>=j)
         return featd
@@ -249,21 +225,13 @@ def evalu(dset, yhat):
     p, r, f = evaluate_system.evaluateIdentifier(gold_labels, pred_labels)
     return p,r,f
 
-# def main():
 if __name__ == '__main__':
-    random.seed(666)
-
     parser = get_arg_parser()
     args = vars(parser.parse_args())
 
     setup_logger(args)
 
     logging.debug(tabulate([OrderedDict((k,v) for k,v in sorted(args.iteritems()))], headers='keys'))
-    """
-    for k,v in sorted(args.iteritems()):
-        logging.critical('{} {}'.format(k,v))
-    """
-
 
     if args['testf']:
         trn = utils.get_dset()
@@ -273,6 +241,5 @@ if __name__ == '__main__':
             out.write('\n'.join([str(y) for y in ytst]))
     else:
         dset = utils.get_dset()
-        # random.shuffle(dset)
         xvalidate(dset, args, Emb(dset))
 
