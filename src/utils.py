@@ -6,9 +6,10 @@ from collections import defaultdict as dd
 EMB_DIR ='/ai/home/vcirik/embeddings' 
 
 
-def get_dset():
+"""
+def get_dset(fname='training'):
     s2tuples = dd(list)
-    with open('data/cwi_training.txt') as src:
+    with open('data/cwi_%s.txt'%fname) as src:
         lines = [l.strip().split('\t') for l in src]
     for s,w,i,l in lines:
         s2tuples[s].append((int(i),w,int(l)))
@@ -18,6 +19,23 @@ def get_dset():
 
     trn = [st2sent(s,tuples) for s, tuples in s2tuples.items()]
     return trn
+"""
+
+def get_dset(fname='training'):
+    with open('data/cwi_%s.txt'%fname) as src:
+        lines = [l.strip().split('\t') for l in src]
+
+    prevs = 'asdf'
+    tuples = []
+    tst = []
+    for curs,w,i,lbl in lines:
+        if prevs != curs and len(tuples) > 0:
+            tst.append(st2sent(prevs, tuples))
+            tuples = []
+        tuples.append((int(i),w,int(lbl)))
+        prevs = curs
+    tst.append(st2sent(prevs, tuples))
+    return tst
 
 def get_test():
     s2tuples = dd(list)
@@ -70,7 +88,11 @@ def stats(s2tuples):
 if __name__ == '__main__':
     import random
     trn = get_dset()
-    tst = get_test()
+    tst = get_dset('testing_annotated')
+    print map(len,(trn,tst))
+    print 'trn total wordc:', sum(len(sent['ws']) for sent in trn)
+    print 'tst total wordc:', sum(len(sent['ws']) for sent in tst)
+    """
     print len(tst)
     print 'trn len:', sum(sum(sent['ii']) for sent in trn)
     print 'tst len:', sum(sum(sent['ii']) for sent in tst)
@@ -81,6 +103,7 @@ if __name__ == '__main__':
     logging.debug('# of words per sent, min:{} max:{} mean:{:.2f} std:{:.2f}'.format(min(sent_lens), max(sent_lens), np.mean(sent_lens), np.std(sent_lens)))
     sent = trn[0]
     pprint_word(sent)
+    """
 
 
 

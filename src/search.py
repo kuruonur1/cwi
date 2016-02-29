@@ -36,9 +36,12 @@ def get_arg_parser():
     parser = argparse.ArgumentParser(prog="search", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument("--log", default='auto', help="log file name")
-    parser.add_argument("--evals", default=100, type=int, help="log file name")
+    parser.add_argument("--data", default='training', choices=['training','testing_annotated'], help="log file name")
+    parser.add_argument("--evals", default=100, type=int, help="num of configurations to try")
     parser.add_argument("--embs", nargs='+', default=['s50','g50'], help='which embs') 
     parser.add_argument("--e_context", default=0, type=int, help="e context")
+    parser.add_argument("--feats", default='psn', help="which features")
+
     parser.add_argument("--kerngamma", nargs='+', default=['loguniform',-15,5], help='gammas')
     parser.add_argument("--C", nargs='+', default=['loguniform',-15,5], help='C distribution')
     parser.add_argument("--percentile", nargs='+', default=['quniform',5,30,1], help='percentile distribution')
@@ -49,10 +52,11 @@ def main(args):
     logging.critical(tabulate([args], headers='keys', floatfmt='.2f')+'\n')
     random.seed(0)
     defaults = {'embs': args['embs'], 'n_fold' : 5, 'e_context' : args['e_context'],
-            'feats' : 'spn', 'percentile' : 20, 'unkt' : 2,
+            'feats' : args['feats'], 'percentile' : 20, 'unkt' : 2,
             'clf' : 'svm', 'kerntype' : 'rbf', 'kerngamma' : 1, 'kerncoef0' : 1, 'kerndegree' : 2, 'cweights' : 1}
 
     
+    assert hasattr(hp,'loguniform')
     space = {
             # 'kerngamma' : hp.loguniform('kerngamma', -20, 8),
             'kerngamma' : getattr(hp, args['kerngamma'][0])('kerngamma', *map(int, args['kerngamma'][1:])),
@@ -68,7 +72,7 @@ def main(args):
 
     from cwi import xvalidate, Emb
     import utils
-    dset = utils.get_dset()
+    dset = utils.get_dset(args['data'])
     emb = Emb(dset)
 
 

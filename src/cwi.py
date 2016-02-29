@@ -43,12 +43,9 @@ def get_arg_parser():
     parser.add_argument("--e_context", default=0, type=int, help="num of words around token")
     parser.add_argument("--feats", default='', help="which feats to use")
     parser.add_argument("--percentile", default=20, type=int, help="percentile for feature selection")
-    parser.add_argument("--w_context", default=2, type=int, help="num of words around token")
 
     parser.add_argument("--cweights", default=1, type=int, help="use cweights")
-    parser.add_argument("--unkt", default=2, type=int, help="unk threshold")
 
-    parser.add_argument("--clf", default='svm', choices=['svm','lo'], help="clf type")
     parser.add_argument("--C", default=1, type=float, help="the C")
     parser.add_argument("--kerntype", default='lin', choices=['lin','poly','rbf'],  help="kernel type")
     parser.add_argument("--kerngamma", default=1., type=float, help="poly or rbf gamma")
@@ -57,6 +54,8 @@ def get_arg_parser():
 
     parser.add_argument("--log", default='dont', help="log file name")
     parser.add_argument("--testf", default=False, help="print test data")
+    parser.add_argument("--data", default='training', choices=['training','testing_annotated'], help="log file name")
+    parser.add_argument("--sample", default=0, type=int, help="num of sents to sample")
 
     return parser
 
@@ -163,19 +162,21 @@ class Feat(object):
     def __init__(self, dset, args):
         self.precounts = Counter(w[:j] for sent in dset for w in sent['ws'] for j in range(1,len(w)-1))
         self.sufcounts = Counter(w[-j:] for sent in dset for w in sent['ws'] for j in range(1,len(w)-1))
-        self.unkt = args['unkt']
         self.feats = args['feats']
+        # self.unkt = args['unkt']
 
     def f_ngrams(self, w, n):
         # return [w[i:i+n] for i in xrange(len(w)-n+1)]
         return [w[i:i+n] for i in xrange(1,len(w)-n)]
 
 
+    """
     def get_pre(self, sub, j):
         return '<unkpre%d>'%j if self.precounts[sub] < self.unkt else sub
 
     def get_suf(self, sub,j):
         return  '<unksuf%d>'%j if self.sufcounts[sub] < self.unkt else sub
+    """
 
     def get_features(self, i, sent):
         """
@@ -234,12 +235,15 @@ if __name__ == '__main__':
     logging.debug(tabulate([OrderedDict((k,v) for k,v in sorted(args.iteritems()))], headers='keys'))
 
     if args['testf']:
-        trn = utils.get_dset()
+        trn = utils.get_dset(args['data'])
         tst = utils.get_test()
         ytrn, ytst = fit_predict(trn, tst, args, Emb(trn+tst))
         with open(args['testf'], 'w') as out:
             out.write('\n'.join([str(y) for y in ytst]))
     else:
-        dset = utils.get_dset()
+        dset = utils.get_dset(args['data'])
+        if args['sample'] > 0:
+            random.seed(0)
+            dset = random.sample(dset, args['sample'])
         xvalidate(dset, args, Emb(dset))
 

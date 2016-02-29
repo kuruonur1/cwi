@@ -52,12 +52,16 @@ if __name__ == '__main__':
     emb = cwi.Emb(dset)
 
     infolist = []
+    infolist.append(opt(dset,emb,['r50'],0))
+
+    """
     for ec in range(4):
         infolist.extend(opt(dset,emb,['{}{}'.format(e,dim)],ec) for e,dim in product(['s','g'],[50,100,200]))
         # infolist.extend(opt(dset,emb,ename,ec) for ename in [['s50']])
 
     for ec in range(4):
         infolist.extend(opt(dset,emb,[e1,e2],ec) for e1,e2 in product(['s50','s100','s200'],['g50','g100','g200']))
+    """
 
     logging.critical(tabulate(infolist,headers='keys'))
 
